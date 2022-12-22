@@ -1,0 +1,65 @@
+.centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+.logoContainer{
+    margin-right: auto;
+    margin-left: 4rem;
+    font-size: 1.5rem;
+}
+.navsContainer{
+    display: flex;
+    margin-left: auto;
+    margin-right: 4rem;
+}
+.navsContainer >.navs{
+    border: 2px solid;
+    width: 6.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+
+}
+.selectTheme{
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    width: 10rem;
+    justify-content: space-around;
+}
+.colorSelector{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid purple;
+}
+.colorSelector:hover{
+    cursor: pointer;
+}
+.selectMode{
+    background-color: rgb(146, 15, 178);
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.selectMode:hover{
+    cursor: pointer;
+}
+#lightModeBtn{
+    margin-left: 0.5rem;
+    margin-right: auto;
+}
+#darkModeBtn{
+    margin-left: auto;
+    margin-right: 0.5rem;
+}
