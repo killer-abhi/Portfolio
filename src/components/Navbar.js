@@ -3,19 +3,36 @@ import Zoom from '@mui/material/Zoom';
 
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 //Navbar CSS
 import '../css/navbar.css';
 
 import ColorCards from "./ColorCards";
 
+import Data from "./Data";
+
 function Navbar(props) {
 
     const [mode, setMode] = useState("light");
-    const [colorCard,setColorCard]=useState(false);
-    const [colorCardDisplay,setColorCardDisplay]=useState("none");
+    const [colorCard, setColorCard] = useState('none');
+
+    const [navActive,setNavActive]=useState(1);
+
+    function handleNavActive(index){
+        // console.log(index);
+        setNavActive(prevActive=>{
+            let prevNav=document.getElementById("navElement"+prevActive);
+            prevNav.classList.toggle('active');
+            console.log(prevActive);
+            return(index);
+        })
+        let currentNav=document.getElementById("navElement"+index);
+        currentNav.classList.toggle('active');
+    }
 
     function handleModeChange() {
-        
+
         const lightModeBtn = document.getElementById("lightModeBtn")
         const darkModeBtn = document.getElementById("darkModeBtn")
         const newTheme = {
@@ -26,6 +43,7 @@ function Navbar(props) {
         if (mode === 'light') {
             setMode("dark");
             newTheme.backgroundColor = "black";
+            newTheme.color = "white";
             lightModeBtn.style.display = "none";
             darkModeBtn.style.display = "block";
             darkModeBtn.style.color = "black";
@@ -33,22 +51,24 @@ function Navbar(props) {
         else {
             setMode("light");
             newTheme.backgroundColor = "gray";
+            newTheme.color = "black";
             lightModeBtn.style.display = "block";
             darkModeBtn.style.display = "none";
             lightModeBtn.style.color = "white";
         }
         props.changeColor(newTheme);
+        // handleColorSelector();
     }
-    
-    function handleColorSelector(){
-        setColorCard(!colorCard);
-        if(colorCard){
 
-            setColorCardDisplay("none");
+    function handleColorSelector() {
+        // setColorCard(!colorCard);
+        if (colorCard==='grid') {
+
+            setColorCard("none");
         }
-        else{
-            
-            setColorCardDisplay("absolute");
+        else {
+
+            setColorCard("grid");
         }
     }
     function changeTheme(newColor) {
@@ -65,23 +85,24 @@ function Navbar(props) {
             <Zoom in={true}>
                 <div className="logoContainer">
                     <div id="logo">
-                        Abhishek Kumar
+                        {Data.personalData.firstName}&nbsp;&nbsp;{Data.personalData.lastName}
                     </div>
                 </div>
             </Zoom>
             <Zoom in={true}>
                 <div className="navsContainer">
-                    <div className="navs centered" id="navElement1">Element 1</div>
-                    <div className="navs centered" id="navElement2">Element 2</div>
-                    <div className="navs centered" id="navElement3">Element 3</div>
-                    <div className="navs centered" id="navElement4">Element 4</div>
-                    <div className="navs centered" id="navElement5">Element 5</div>
+            
+                    <div className="navs centered active" id="navElement1" onClick={()=>handleNavActive(1)}>Element 1</div>
+                    <div className="navs centered" id="navElement2" onClick={()=>handleNavActive(2)}>Element 2</div>
+                    <div className="navs centered" id="navElement3" onClick={()=>handleNavActive(3)}>Element 3</div>
+                    <div className="navs centered" id="navElement4" onClick={()=>handleNavActive(4)}>Element 4</div>
+                    <div className="navs centered" id="navElement5" onClick={()=>handleNavActive(5)}>Element 5</div>
                     <div className="selectTheme">
-                        <div className="colorSelector" onClick={handleColorSelector} style={{backgroundColor:props.theme.color}}>
-                            {colorCard&&<ColorCards display={colorCardDisplay} selectColor={changeTheme} />}
+                        <div className="colorSelector" onClick={handleColorSelector} style={{ backgroundColor: props.theme.color }}>
+                            <ColorCards display={colorCard} theme={props.theme} selectColor={changeTheme} mode={mode} />
                         </div>
                         <div className="selectMode" onClick={handleModeChange}>
-                            <div id="lightModeBtn"><LightModeIcon /></div>
+                            <div id="lightModeBtn" style={{ color: "white" }}><LightModeIcon /></div>
                             <div id="darkModeBtn" style={{ display: "none" }}><DarkModeIcon /></div>
                         </div>
                         {/* <input type="color"

@@ -7,7 +7,7 @@ import ColorCards from './components/ColorCards';
 function App(){
 
     const [theme,setTheme]=useState({
-        backgroundColor:"gray",
+        backgroundColor:"#91D8E4",
         color:"white"
     })
 

@@ -1,152 +1,38 @@
-.swatch {
-    display: block;
-    text-align: center;
-    position: absolute;
-    top: 10px;
-    left:340px ;
-    z-index: -1;
-    margin:auto 1000px;
-  }
-  .swatch div {
-    width: 70px;
-    height: 225px;
-    position: absolute;
-    top: 0px;
-    border-radius: 5px;
-    border-top: solid 2px rgba(0,0,0,0.2);
-    border-left: solid 3px rgba(255,255,255,0.2);
-    border-bottom: solid 3px rgba(0,0,0,0.2);
-    text-align: center;
-    box-sizing: border-box;
-    transform-origin: center 10%;
-    display: inline-block;
-    backface-visibility: hidden;
-    margin-left: -35px;
-    transform: rotate(0deg);
-  }
-  .swatch div:before {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    content: "";
-    background-color: #FFFFFF;
-    display: inline-block;
-    bottom: 184px;
-    position: absolute;
-    margin-left:-15px;
-  }
-  .swatch div:nth-child(1) {
-    /* background-color: #815A8F; */
-    animation: swatch-purple-motion 5s cubic-bezier(0.4,0.0,0.2,1) 1 normal forwards;
-    /* animation-play-state: paused; */
-  }
-  .swatch div:nth-child(2) {
-    /* background-color: #6730EC; */
-    animation: swatch-blue-motion 5s cubic-bezier(0.4,0.0,0.2,1) 1 normal forwards;
-    /* animation-play-state: paused; */
-  }
-  .swatch div:nth-child(3) {
-    /* background-color: #9ED763; */
-    animation: swatch-green-motion 5s cubic-bezier(0.4,0.0,0.2,1) 1 normal forwards;
-    /* animation-play-state: paused; */
-  }
-  .swatch div:nth-child(4) {
-    /* background-color: #FBD400; */
-    animation: swatch-yellow-motion 5s cubic-bezier(0.4,0.0,0.2,1) 1 normal forwards;
-    /* animation-play-state: paused; */
-  }
-  .swatch div:nth-child(5) {
-    /* background-color: #FF9000; */
-    animation: swatch-orange-motion 5s cubic-bezier(0.4,0.0,0.2,1) 1 normal forwards;
-    /* animation-play-state: paused; */
-  }
-  .swatch div:nth-child(6) {
-    /* background-color: #F73F52; */
-    animation: swatch-red-motion 5s cubic-bezier(0.4,0.0,0.2,1) 1 normal forwards;
-    /* animation-play-state: paused; */
+.colorCard{
+  height: 15rem;
+  width: 8rem;
+  background-color: aqua;
+  position: absolute;
+  left: auto;
+  right: 4rem;
+  top: 10rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2,3rem);
+  column-gap: 0.5rem;
+  row-gap: 0rem;
+  align-items:center;
+  justify-content: center;
+  /* animation: slide 1s ease-in normal forwards; */
 }
-.swatch div:hover{
-    cursor: pointer;  
-    filter: brightness(70%);
-    /* animation-play-state: running; */
+.colorCard > div{
+  height: 3rem;
+  border-radius: 0.5rem;
+  animation: zoom 0.2s normal forwards;
 }
-@keyframes swatch-purple-motion {
-    0% {
-      transform: rotate(0deg);
-    }
-    30%,
-    100% {
-      transform: rotate(-65deg);
-    }
-    /* 90%,
-    10% {
-      transform: rotate(0deg);
-    } */
-  }
-  @keyframes swatch-blue-motion {
-    0% {
-      transform: rotate(0deg);
-    }
-    30%,
-    100% {
-      transform: rotate(-40deg);
-    }
-    /* 90%,
-    10% {
-      transform: rotate(0deg);
-    } */
-  }
-  @keyframes swatch-green-motion {
-    0% {
-      transform: rotate(0deg);
-    }
-    30%,
-    100% {
-      transform: rotate(-15deg);
-    }
-    /* 90%,
-    10% {
-      transform: rotate(0deg);
-    } */
-  }
-  @keyframes swatch-yellow-motion {
-    0% {
-      transform: rotate(0deg);
-    }
-    30%,
-    100% {
-      transform: rotate(15deg);
-    }
-    /* 90%,
-    10% {
-      transform: rotate(0deg);
-    } */
-  }
-  @keyframes swatch-orange-motion {
-    0% {
-      transform: rotate(0deg);
-    }
-    30%,
-    100% {
-      transform: rotate(40deg);
-    }
-    /* 90%,
-    10% {
-      transform: rotate(0deg);
-    } */
-  }
-  @keyframes swatch-red-motion {
-    0% {
-      transform: rotate(0deg);
-    }
-    30%,
-    100% {
-      transform: rotate(65deg);
-    }
-    /* 90%,
-    10% {
-      transform: rotate(0deg);
-    } */
-  }
 
+@keyframes zoom {
+  0%  {
+      transform: scale(0, 0);
+  }
+  25%  {
+      transform: scale(0.25, 0.25);
+  }
+  75%  {
+      transform: scale(0.75, 0.75);
+  }
   
+  100% {
+      transform: scale(1, 1);
+  }
+}
