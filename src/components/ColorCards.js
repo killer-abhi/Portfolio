@@ -25,8 +25,8 @@ function ColorCards(props) {
             <div onClick={()=>handleClick(3)} style={{backgroundColor:defaultColors[3]}}></div>
             <div onClick={()=>handleClick(4)} style={{backgroundColor:defaultColors[4]}}></div>
             <div onClick={()=>handleClick(5)} style={{backgroundColor:defaultColors[5]}}></div>
-            <div onClick={()=>handleClick(5)} style={{backgroundColor:defaultColors[6]}}></div>
-            <div onClick={()=>handleClick(5)} style={{backgroundColor:defaultColors[7]}}></div>
+            <div onClick={()=>handleClick(6)} style={{backgroundColor:defaultColors[6]}}></div>
+            <div onClick={()=>handleClick(7)} style={{backgroundColor:defaultColors[7]}}></div>
         </div>
     )
 }

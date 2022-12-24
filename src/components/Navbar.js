@@ -17,17 +17,17 @@ function Navbar(props) {
     const [mode, setMode] = useState("light");
     const [colorCard, setColorCard] = useState('none');
 
-    const [navActive,setNavActive]=useState(1);
+    const [navActive, setNavActive] = useState(1);
 
-    function handleNavActive(index){
+    function handleNavActive(index) {
         // console.log(index);
-        setNavActive(prevActive=>{
-            let prevNav=document.getElementById("navElement"+prevActive);
+        setNavActive(prevActive => {
+            let prevNav = document.getElementById("navElement" + prevActive);
             prevNav.classList.toggle('active');
             console.log(prevActive);
-            return(index);
+            return (index);
         })
-        let currentNav=document.getElementById("navElement"+index);
+        let currentNav = document.getElementById("navElement" + index);
         currentNav.classList.toggle('active');
     }
 
@@ -50,7 +50,7 @@ function Navbar(props) {
         }
         else {
             setMode("light");
-            newTheme.backgroundColor = "gray";
+            newTheme.backgroundColor = "rgb(237, 249, 254)";
             newTheme.color = "black";
             lightModeBtn.style.display = "block";
             darkModeBtn.style.display = "none";
@@ -62,7 +62,7 @@ function Navbar(props) {
 
     function handleColorSelector() {
         // setColorCard(!colorCard);
-        if (colorCard==='grid') {
+        if (colorCard === 'grid') {
 
             setColorCard("none");
         }
@@ -80,37 +80,55 @@ function Navbar(props) {
         props.changeColor(newTheme);
     }
 
+    const [isVisible, setIsVisible] = useState(false);
+
+    function handleMenu() {
+        console.log(isVisible);
+        setIsVisible(!isVisible);
+    }
     return (
-        <div className="navbar" style={props.theme}>
-            <Zoom in={true}>
-                <div className="logoContainer">
-                    <div id="logo">
-                        {Data.personalData.firstName}&nbsp;&nbsp;{Data.personalData.lastName}
-                    </div>
-                </div>
-            </Zoom>
-            <Zoom in={true}>
-                <div className="navsContainer">
-            
-                    <div className="navs centered active" id="navElement1" onClick={()=>handleNavActive(1)}>Element 1</div>
-                    <div className="navs centered" id="navElement2" onClick={()=>handleNavActive(2)}>Element 2</div>
-                    <div className="navs centered" id="navElement3" onClick={()=>handleNavActive(3)}>Element 3</div>
-                    <div className="navs centered" id="navElement4" onClick={()=>handleNavActive(4)}>Element 4</div>
-                    <div className="navs centered" id="navElement5" onClick={()=>handleNavActive(5)}>Element 5</div>
-                    <div className="selectTheme">
-                        <div className="colorSelector" onClick={handleColorSelector} style={{ backgroundColor: props.theme.color }}>
-                            <ColorCards display={colorCard} theme={props.theme} selectColor={changeTheme} mode={mode} />
+        <div className="main">
+            <div className="navbar" style={props.theme}>
+                <Zoom in={true}>
+                    <div className="logoContainer">
+                        <div id="logo">
+                            {Data.personalData.firstName}&nbsp;&nbsp;{Data.personalData.lastName}
                         </div>
-                        <div className="selectMode" onClick={handleModeChange}>
-                            <div id="lightModeBtn" style={{ color: "white" }}><LightModeIcon /></div>
-                            <div id="darkModeBtn" style={{ display: "none" }}><DarkModeIcon /></div>
-                        </div>
-                        {/* <input type="color"
-                            value={props.theme.color}
-                            onChange={changeTheme}
-                        /> */}
                     </div>
+                </Zoom>
+                <Zoom in={true}>
+                    <div className="navsContainer">
+                        <div className="navs centered active" id="navElement1" onClick={() => handleNavActive(1)}>Element 1</div>
+                        <div className="navs centered" id="navElement2" onClick={() => handleNavActive(2)}>Element 2</div>
+                        <div className="navs centered" id="navElement3" onClick={() => handleNavActive(3)}>Element 3</div>
+                        <div className="navs centered" id="navElement4" onClick={() => handleNavActive(4)}>Element 4</div>
+                        <div className="navs centered" id="navElement5" onClick={() => handleNavActive(5)}>Element 5</div>
+                    </div>
+                </Zoom>
+                <div className="selectTheme">
+                    <div className="selectMode" onClick={handleModeChange}>
+                        <div id="lightModeBtn" style={{ color: "white" }}><LightModeIcon /></div>
+                        <div id="darkModeBtn" style={{ display: "none" }}><DarkModeIcon /></div>
+                    </div>
+                    <div className="colorSelector" onClick={handleColorSelector} style={{ backgroundColor: props.theme.color }}>
+                        <ColorCards display={colorCard} theme={props.theme} selectColor={changeTheme} mode={mode} />
+                    </div>
+                    <input type="checkbox" id="burger-toggle" onClick={handleMenu} />
+                    <label for="burger-toggle" className="burger-menu">
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                    </label>
                 </div>
+            </div>
+            <Zoom in={true}>
+            <div className="mob-nav" style={{ color: props.theme.color, display: isVisible ?  "flex" :"none" }}>
+                <div className="navs" id="navElement1" onClick={() => handleNavActive(1)}>Element 1</div>
+                <div className="navs" id="navElement2" onClick={() => handleNavActive(2)}>Element 2</div>
+                <div className="navs" id="navElement3" onClick={() => handleNavActive(3)}>Element 3</div>
+                <div className="navs" id="navElement4" onClick={() => handleNavActive(4)}>Element 4</div>
+                <div className="navs" id="navElement5" onClick={() => handleNavActive(5)}>Element 5</div>
+            </div>
             </Zoom>
         </div>
     )

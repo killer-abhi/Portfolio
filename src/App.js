@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import './css/app.css';
 //components
 import Navbar from './components/Navbar';
-import ColorCards from './components/ColorCards';
+import Home from './components/Home';
 
 function App(){
 
     const [theme,setTheme]=useState({
-        backgroundColor:"#91D8E4",
-        color:"white"
+        backgroundColor:"rgb(237, 249, 254)",
+        color:"balck"
     })
 
     function changeTheme(newTheme){
@@ -22,7 +22,7 @@ function App(){
     return(
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
-            <h1>Killer Abhi</h1>
+            <Home/>
         </div>
     )
 }
