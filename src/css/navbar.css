@@ -7,7 +7,9 @@
 	.navbar {
 		height: 5rem;
 		display: flex;
+		position: fixed;
 		align-items: center;
+		width: 100%;
 	}
 	.logoContainer {
 		margin-right: auto;
@@ -215,6 +217,7 @@
 		height: var(--burger-menu-radius);
 		outline: none;
 		cursor: pointer;
+		transition:all 1s ease-in-out;
 	}
 	.burger-menu .line {
 		position: absolute;

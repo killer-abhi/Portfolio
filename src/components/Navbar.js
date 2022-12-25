@@ -114,7 +114,7 @@ function Navbar(props) {
                         <ColorCards display={colorCard} theme={props.theme} selectColor={changeTheme} mode={mode} />
                     </div>
                     <input type="checkbox" id="burger-toggle" onClick={handleMenu} />
-                    <label for="burger-toggle" className="burger-menu">
+                    <label htmlFor="burger-toggle" className="burger-menu">
                         <div className="line"></div>
                         <div className="line"></div>
                         <div className="line"></div>
