@@ -98,7 +98,7 @@ function Navbar(props) {
                 </Zoom>
                 <Zoom in={true}>
                     <div className="navsContainer">
-                        <div className="navs centered active" id="navElement1" onClick={() => handleNavActive(1)}>Element 1</div>
+                        <div className="navs centered active" id="navElement1" onClick={() => handleNavActive(1)}>Home</div>
                         <div className="navs centered" id="navElement2" onClick={() => handleNavActive(2)}>Element 2</div>
                         <div className="navs centered" id="navElement3" onClick={() => handleNavActive(3)}>Element 3</div>
                         <div className="navs centered" id="navElement4" onClick={() => handleNavActive(4)}>Element 4</div>

@@ -1,0 +1,8 @@
+footer{
+    font-size: 1.2rem;
+    font-family: 'Barlow Condensed';
+    /* position: fixed; */
+    top: auto;
+    height: 3rem;
+    width: 100%;
+}

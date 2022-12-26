@@ -3,12 +3,13 @@ import './css/app.css';
 //components
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Footer from './components/Footer';
 
 function App(){
 
     const [theme,setTheme]=useState({
         backgroundColor:"rgb(237, 249, 254)",
-        color:"balck"
+        color:"black"
     })
 
     function changeTheme(newTheme){
@@ -23,6 +24,7 @@ function App(){
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
             <Home/>
+            <Footer/>
         </div>
     )
 }

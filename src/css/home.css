@@ -36,10 +36,14 @@
 .connect{
     display: flex;
 }
+
 .connect-link{
     margin-left: 1rem;
     width: 3rem;
     height: 3rem;
+}
+a{
+    color: inherit;
 }
 .connect-link:hover{
     cursor: pointer;
