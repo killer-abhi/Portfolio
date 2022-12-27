@@ -145,7 +145,7 @@
 	.selectMode {
 		background-color: rgb(146, 15, 178);
 		width: 4rem;
-		height: 1.6rem;
+		height: 1.8rem;
 		border-radius: 1rem;
 		display: flex;
 		align-items: center;
@@ -261,7 +261,7 @@
 
 	.mob-nav{
 		height: 12rem;
-		display: flex;
+		/* display: flex; */
 		flex-direction: column;
 		justify-content: space-evenly;
 		font-size: 1.3rem;
@@ -276,7 +276,7 @@
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem 0.5rem 1rem;
 		font-size: 1.3rem;
-		text-align: center;
+		text-align: justify;
 		font-family: "Barlow Condensed", sans-serif;
 	}
 	.active {

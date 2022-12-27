@@ -4,6 +4,7 @@ import './css/app.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Education from './components/Education';
 
 function App(){
 
@@ -23,7 +24,8 @@ function App(){
     return(
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
-            <Home/>
+            {/* <Home/> */}
+            <Education/>
             <Footer/>
         </div>
     )

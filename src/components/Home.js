@@ -47,7 +47,7 @@ function Home(props) {
                 <div className="rolling-text">
                     I am a &nbsp; <span id="typer" style={{color:Data.extraColors[0]}}></span>
                 </div>
-                <div className="connect">
+                <div className="connect centered">
                     <div className="connect-link centered"><a href={Data.profileLinks.githubLink}><GitHubIcon fontSize="large" /></a></div>
                     <div className="connect-link centered"><a href={Data.profileLinks.linkedInLink}><LinkedInIcon fontSize="large" /></a></div>
                     <div className="connect-link centered"><a href={Data.profileLinks.twitterLink}><TwitterIcon fontSize="large" /></a></div>
@@ -65,7 +65,7 @@ function Home(props) {
                 </div>
             </div>
             <div className="cover-image">
-                <img src={CoverImg} height="400px" width="600px" alt="" srcSet="" />
+                <img src={CoverImg} alt="" srcSet="" />
             </div>
         </div>
     )

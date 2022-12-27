@@ -23,15 +23,15 @@
 }
 @media (min-width:300px)and (max-width:600px) {
   .colorCard{
-    height: 10rem;
-    width: 6rem;
+    height: 15rem;
+    width: 8rem;
     position: absolute;
     left: auto;
-    right: 2rem;
-    top: 8rem;
+    right: 1rem;
+    top: 5rem;
     border-radius: 0.5rem;
     display: grid;
-    grid-template-columns: repeat(2,2rem);
+    grid-template-columns: repeat(2,2.5rem);
     column-gap: 0.5rem;
     row-gap: 0rem;
     align-items:center;
@@ -39,7 +39,7 @@
     /* animation: slide 1s ease-in normal forwards; */
   }
   .colorCard > div{
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 0.5rem;
     animation: zoom 0.2s normal forwards;
   }
