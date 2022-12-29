@@ -6,12 +6,12 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 //Navbar CSS
-import '../css/navbar.css';
+import './navbar.css';
 
 import ColorCards from "./ColorCards";
 import Dropdown from "./Dropdown";
 
-import Data from "./Data";
+import Data from "../Data";
 
 function Navbar(props) {
 

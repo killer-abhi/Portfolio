@@ -1,9 +1,9 @@
 import React,{useState} from "react";
-import "../css/colorCards.css"
+
 import Zoom from '@mui/material/Zoom';
+import Data from "../Data";
 
-import Data from "./Data";
-
+import "./colorCards.css"
 function ColorCards(props) {
     let defaultColors;
     if(props.mode==='light'){

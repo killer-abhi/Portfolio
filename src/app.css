@@ -3,6 +3,7 @@
     left: 0;
     margin: 0;
     padding: 0;
+    color: inherit;
 }
 .App{
     /* max-width: ; */

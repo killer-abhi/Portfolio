@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Data from "./Data";
+import Data from "../Data";
 import Typewriter from 'typewriter-effect/dist/core';
-import "../css/home.css";
-import CoverImg from "./asset/Web-Design-PNG-Transparent.png";
+import CoverImg from "../asset/Web-Design-PNG-Transparent.png";
 
+import "./home.css";
 //icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -47,7 +47,7 @@ function Home(props) {
                 <div className="rolling-text">
                     I am a &nbsp; <span id="typer" style={{color:Data.extraColors[0]}}></span>
                 </div>
-                <div className="connect centered">
+                <div className="connect">
                     <div className="connect-link centered"><a href={Data.profileLinks.githubLink}><GitHubIcon fontSize="large" /></a></div>
                     <div className="connect-link centered"><a href={Data.profileLinks.linkedInLink}><LinkedInIcon fontSize="large" /></a></div>
                     <div className="connect-link centered"><a href={Data.profileLinks.twitterLink}><TwitterIcon fontSize="large" /></a></div>

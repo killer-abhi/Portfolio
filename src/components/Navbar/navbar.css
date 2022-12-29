@@ -19,6 +19,7 @@
 	}
 	.navsContainer {
 		display: flex;
+		gap: 1rem;
 		margin-left: auto;
 		margin-right: 1rem;
 	}
@@ -26,7 +27,7 @@
 		width: 6.5rem;
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem 0.5rem 1rem;
-		margin-left: 1rem;
+		/* margin-left: 1rem; */
 		font-size: 1.5rem;
 		font-family: "Barlow Condensed", sans-serif;
 	}

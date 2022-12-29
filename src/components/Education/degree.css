@@ -1,0 +1,66 @@
+.degree{
+    width: 80%;
+    margin: 0rem auto;
+    font-family: "Barlow Condensed";
+}
+#title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.degree-card{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    /* height: 20rem; */
+}
+#img{
+    height: 15rem;
+    width: 15rem;
+}
+#img img{
+    height: 15rem;
+    width: 15rem;
+}
+.degree-wrapper{
+
+    margin-left: 2rem;
+    width: 90%;
+    /* background-color: aqua; */
+    border-radius: 1rem;
+    /* box-shadow: 5px 5px 5px #d9dbdf;
+    border-bottom: 1px solid #d9dbdf;
+    border-left: 1px solid #d9dbdf;
+    border-right: 1px solid #d9dbdf; */
+}
+.degree-info{
+    /* border-radius: 1rem; */
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    padding: 1rem;
+    /* background-color: aquamarine; */
+    /* font-size: 2rem; */
+    /* background-color: gray; */
+    font-weight: 900;
+}
+#college-name{
+    font-size: 2.2rem;
+}
+#course{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+#course-duration{
+    float: right;
+    font-size: 1.5rem;
+}
+.details{
+    padding: 1rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+li{
+    /* list-style-image:url() ; */
+    list-style-type: square;
+}

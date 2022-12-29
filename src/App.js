@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import './css/app.css';
+import './app.css';
 //components
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Footer from './components/Footer';
-import Education from './components/Education';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
+import Education from './components/Education/Education';
 
 function App(){
 
@@ -24,8 +24,8 @@ function App(){
     return(
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
-            {/* <Home/> */}
-            <Education/>
+            <Home/>
+            <Education theme={theme}/>
             <Footer/>
         </div>
     )

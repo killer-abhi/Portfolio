@@ -34,18 +34,14 @@
         text-align: center;
         font-weight: 600;
     }
-    .connect{
-        display: flex;
-    }
-    
     .connect-link{
         margin-left: 1rem;
         width: 3rem;
         height: 3rem;
     }
-    a{
+    /* a{
         color: inherit;
-    }
+    } */
     .connect-link:hover{
         cursor: pointer;
     }
@@ -98,15 +94,14 @@
         text-align: center;
         font-weight: 600;
     }
-    
     .connect-link{
         margin-left: 1rem;
         width: 3rem;
         height: 3rem;
     }
-    a{
+    /* a{
         color: inherit;
-    }
+    } */
     .connect-link:hover{
         cursor: pointer;
     }
@@ -165,9 +160,9 @@
         width: 3rem;
         height: 3rem;
     }
-    a{
+    /* a{
         color: inherit;
-    }
+    } */
     .connect-link:hover{
         cursor: pointer;
     }
@@ -179,4 +174,9 @@
         height: 200px;
         width: 300px;
     }
+}
+.connect{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
