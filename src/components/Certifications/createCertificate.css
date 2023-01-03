@@ -1,0 +1,52 @@
+.certificate{
+    height: 15rem;
+    background-color: aquamarine;
+}
+.cert-body{
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 800;
+}
+.cert-image{
+    border-radius: inherit;
+    height: 8rem;
+    background-color: aquamarine;
+}
+
+.cert-title{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+.instructor{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+a{
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0rem auto;
+}
+.cert-overlay{
+    opacity: 1;
+    position: relative;
+}
+.overlay-link{
+    height: 15rem;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    /* text-align: center; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-link a{
+
+}
+.cert-body:hover .overlay-link{
+    z-index: 1;
+    opacity: 1;
+    cursor:pointer;
+}
+

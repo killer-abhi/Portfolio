@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Education from './components/Education/Education';
-
+import Certifications from "./components/Certifications/Certifications";
 function App(){
 
     const [theme,setTheme]=useState({
@@ -24,8 +24,9 @@ function App(){
     return(
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
-            <Home/>
-            <Education theme={theme}/>
+            {/* <Home/> */}
+            {/* <Education theme={theme}/> */}
+            <Certifications/>
             <Footer/>
         </div>
     )

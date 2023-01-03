@@ -19,7 +19,7 @@ function Degree(props) {
                 Degree Pursuing
             </div>
             <div className="degree-card">
-                <div id="img">
+                <div className="centered" id="img">
                     <img src={image} alt="degree" srcset="" />
                 </div>
                 <div className="degree-wrapper" style={myStyle}>
