@@ -3,6 +3,8 @@ import React from "react";
 import "./degree.css";
 import image from "../asset/uptu_logo.png";
 
+import Card from "../UI/Card";
+
 function Degree(props) {
 
     let color=props.theme.color;
@@ -22,7 +24,7 @@ function Degree(props) {
                 <div className="centered" id="img">
                     <img src={image} alt="degree" srcset="" />
                 </div>
-                <div className="degree-wrapper" style={myStyle}>
+                <Card className="degree-wrapper" style={myStyle}>
                     <div className="degree-info" style={{color:"purple"}}>
                         <div id="course-duration">2021 - Present</div>
                         <div id="college-name">Rajkiya Engineering College, Ambedkar Nagar</div>
@@ -50,7 +52,7 @@ function Degree(props) {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </Card>
 
             </div>
         </div>

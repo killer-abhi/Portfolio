@@ -1,52 +1,93 @@
-.certificate{
-    height: 15rem;
-    background-color: aquamarine;
+@media (min-width: 768px) {
+	.certificate {
+		height: 15rem;
+	}
+	.cert-image {
+		border-radius: inherit;
+		height: 8rem;
+	}
+
+	.cert-title {
+		font-size: 2rem;
+		margin-top: 0.5rem;
+	}
+	.instructor {
+		font-size: 1.5rem;
+		margin-top: 1rem;
+	}
+	.overlay-link {
+		height: 8rem;
+	}
+	#overlay-text {
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
 }
-.cert-body{
-    border-radius: 0.5rem;
-    text-align: center;
-    font-weight: 800;
+@media (max-width: 700px) {
+	.certificate {
+		height: 10rem;
+	}
+	.cert-image {
+		border-radius: inherit;
+		height: 5rem;
+	}
+
+	.cert-title {
+		font-size: 1.5rem;
+		margin-top: 0.5rem;
+	}
+	.instructor {
+		font-size: 1.2rem;
+		margin-top: 1rem;
+	}
+	.overlay-link {
+		height: 5rem;
+	}
+	#overlay-text {
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
 }
-.cert-image{
-    border-radius: inherit;
-    height: 8rem;
-    background-color: aquamarine;
+.cert-body {
+	border-radius: 0.5rem;
+	text-align: center;
+	font-weight: 800;
 }
 
-.cert-title{
-    font-size: 2rem;
-    margin-top: 0.5rem;
+.cert-overlay {
+	/* display: none; */
+	position: relative;
 }
-.instructor{
-    font-size: 1.5rem;
-    margin-top: 1rem;
+.overlay-link {
+	/* display: none; */
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* transition: 0.5s ease-in-out; */
 }
-a{
-    text-decoration: none;
-    font-size: 2rem;
-    margin: 0rem auto;
+@keyframes move-in {
+	0% {
+		margin-top: -1rem;
+		opacity: 0.5;
+	}
+	100% {
+		margin-top: 0rem;
+		opacity: 1;
+	}
 }
-.cert-overlay{
-    opacity: 1;
-    position: relative;
+/* .cert-overlay:hover{
+    opacity: 0.5;
+} */
+.cert-overlay:hover .overlay-link {
+	animation: move-in 0.5s ease-in-out 1 normal forwards;
 }
-.overlay-link{
-    height: 15rem;
-    opacity: 0;
-    z-index: -1;
-    position: absolute;
-    /* text-align: center; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#overlay-text {
+	text-decoration: none;
+	border: 2px solid;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 0rem auto;
 }
-.overlay-link a{
-
-}
-.cert-body:hover .overlay-link{
-    z-index: 1;
-    opacity: 1;
-    cursor:pointer;
-}
-

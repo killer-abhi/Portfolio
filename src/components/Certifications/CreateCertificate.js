@@ -1,12 +1,14 @@
 import React from "react";
 
 import "./createCertificate.css"
+
+import Card from '../UI/Card';
 const CreateCertificate = (props) => {
     return (
-        <div className="certificate">
+        <Card className="certificate">
             <div className="cert-overlay">
                 <div className="overlay-link">
-                    <a href={props.item.link} id='view'>
+                    <a href={props.item.link} id='overlay-text'>
                         View Certificate
                     </a>
                 </div>
@@ -22,7 +24,7 @@ const CreateCertificate = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Card>
     )
 }
 export default CreateCertificate;

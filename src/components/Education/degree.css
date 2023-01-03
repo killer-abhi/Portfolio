@@ -29,21 +29,15 @@
 
     margin-left: 2rem;
     width: 90%;
-    /* background-color: aqua; */
-    border-radius: 1rem;
-    /* box-shadow: 5px 5px 5px #d9dbdf;
-    border-bottom: 1px solid #d9dbdf;
-    border-left: 1px solid #d9dbdf;
-    border-right: 1px solid #d9dbdf; */
+    /* box-shadow: 2px 2px 5px purple;
+    border-bottom: 1px solid purple;
+    border-left: 1px solid purple;
+    border-right: 1px solid purple; */
 }
 .degree-info{
-    /* border-radius: 1rem; */
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     padding: 1rem;
-    /* background-color: aquamarine; */
-    /* font-size: 2rem; */
-    /* background-color: gray; */
     font-weight: 900;
 }
 #college-name{
