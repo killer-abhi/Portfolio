@@ -1,0 +1,46 @@
+.projectItem{
+    width: 30%;
+    height: 12rem;
+    /* background-color: aqua; */
+}
+.projectItem h2{
+    font-size: 2rem;
+    color: rgb(175, 3, 175);
+    font-weight: 700;
+}
+.description{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.controls{
+    margin-top: 2rem;
+}
+.projectItem:hover{
+    cursor: pointer;
+    animation: zoom 0.2s ease-in-out normal forwards;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.03);
+    }
+}
+@media (max-width:500px) {
+    .projectItem{
+        height: 10rem;
+        min-width: 20rem;
+    }
+    .projectItem h2{
+        font-size: 1.7rem;
+    }
+    .description{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+    .controls{
+        margin-top: 1rem;
+    }
+}

@@ -6,6 +6,8 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Education from './components/Education/Education';
 import Certifications from "./components/Certifications/Certifications";
+import Projects from "./components/Projects/Project";
+
 function App(){
 
     const [theme,setTheme]=useState({
@@ -15,18 +17,17 @@ function App(){
 
     function changeTheme(newTheme){
         setTheme(prevTheme=>{
-            return(
-                newTheme
-            )
+            return newTheme;
         });
     }
 
     return(
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
-            <Home/>
-            <Education theme={theme}/>
-            <Certifications/>
+            {/* <Home/> */}
+            {/* <Education theme={theme}/> */}
+            {/* <Certifications/> */}
+            <Projects/>
             <Footer/>
         </div>
     )

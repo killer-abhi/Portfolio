@@ -2,6 +2,7 @@ import React,{useState} from "react";
 
 import Zoom from '@mui/material/Zoom';
 import Data from "../Data";
+import Card from '../UI/Card';
 
 import "./colorCards.css"
 function ColorCards(props) {

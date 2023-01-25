@@ -9,18 +9,20 @@
 		display: flex;
 		position: fixed;
 		align-items: center;
+		justify-content: space-between;
 		width: 100%;
 	}
 	.logoContainer {
 		margin-right: auto;
-		margin-left: 4rem;
+		margin-left: 5%;
 		font-size: 2rem;
-		font-family: "Alex Brush", cursive;
+		font-family: "Alex Brush";
 	}
 	.navsContainer {
 		display: flex;
 		gap: 1rem;
 		margin-left: auto;
+		flex-wrap: wrap;
 		margin-right: 1rem;
 	}
 	.navsContainer > .navs {
