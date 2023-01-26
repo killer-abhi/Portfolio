@@ -1,113 +1,80 @@
-@media (min-width:768px) {
-    .Home{
-        margin-top: 5rem;
-        font-family: 'Barlow Condensed';
-        height: 37rem;
-    }
-    .home-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 40%;
-        height: 20rem;
-    }
-    .personal-info{
-        height: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .greeting{
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    #name-div{
-        font-weight: 600;
-        font-size: 2.3rem;
-    }
-    #name{
-        font-size: 2.5rem;
-        font-weight:700;
-    }
-    #nick-name{
-        font-size: 1.5rem;
-        text-align: center;
-        font-weight: 600;
-    }
-    .connect-link{
-        margin-left: 1rem;
-        width: 3rem;
-        height: 3rem;
-    }
-    /* a{
-        color: inherit;
-    } */
-    .connect-link:hover{
-        cursor: pointer;
-    }
-    .rolling-text{
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    .cover-image img{
-        height: 400px;
-        width: 600px;
-    }
+.Home{
+    margin-top: 5rem;
+    height: 37rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 20rem;
+}
+.personal-info{
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.greeting{
+    font-size: 2rem;
+    font-weight: 600;
+}
+#name-div{
+    font-weight: 600;
+    font-size: 2.3rem;
+}
+#name{
+    font-size: 2.5rem;
+    font-weight:700;
+}
+#nick-name{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+.connect-link{
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+/* a{
+    color: inherit;
+} */
+.connect-link:hover{
+    cursor: pointer;
+}
+.rolling-text{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.cover-image img{
+    height: 400px;
+    width: 600px;
 }
 
 /* For Tablet View Only */
 @media (min-width:550px)and (max-width:768px) {
     .Home{
         margin-top: 0rem;
-        font-family: 'Barlow Condensed';
         height: 37rem;
         display: flex;
         flex-direction: column;
     }
     .home-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         width: 80%;
-        height: 20rem;
     }
-    .personal-info{
-        height: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
+   
     .greeting{
         font-size: 1.5rem;
-        font-weight: 600;
     }
     #name-div{
-        font-weight: 600;
         font-size: 2rem;
     }
     #name{
         font-size: 2.5rem;
-        font-weight:700;
-    }
-    #nick-name{
-        font-size: 1.5rem;
-        text-align: center;
-        font-weight: 600;
-    }
-    .connect-link{
-        margin-left: 1rem;
-        width: 3rem;
-        height: 3rem;
-    }
-    /* a{
-        color: inherit;
-    } */
-    .connect-link:hover{
-        cursor: pointer;
     }
     .rolling-text{
         font-size: 1.5rem;
-        font-weight: 600;
     }
     .cover-image img{
         height: 200px;
@@ -119,56 +86,20 @@
 @media (min-width:250px)and (max-width:768px) {
     .Home{
         margin-top: 0rem;
-        font-family: 'Barlow Condensed';
-        height: 37rem;
         display: flex;
         flex-direction: column;
     }
     .home-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         width: 80%;
-        height: 20rem;
-    }
-    .personal-info{
-        height: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
     }
     .greeting{
         font-size: 1.5rem;
-        font-weight: 600;
     }
     #name-div{
-        font-weight: 600;
         font-size: 2rem;
-    }
-    #name{
-        font-size: 2.5rem;
-        font-weight:700;
-    }
-    #nick-name{
-        font-size: 1.5rem;
-        text-align: center;
-        font-weight: 600;
-    }
-    
-    .connect-link{
-        margin-left: 1rem;
-        width: 3rem;
-        height: 3rem;
-    }
-    /* a{
-        color: inherit;
-    } */
-    .connect-link:hover{
-        cursor: pointer;
     }
     .rolling-text{
         font-size: 1.5rem;
-        font-weight: 600;
     }
     .cover-image img{
         height: 200px;

@@ -24,10 +24,10 @@ function App(){
     return(
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
-            {/* <Home/> */}
+            <Home/>
             {/* <Education theme={theme}/> */}
             {/* <Certifications/> */}
-            <Projects/>
+            {/* <Projects/> */}
             <Footer/>
         </div>
     )

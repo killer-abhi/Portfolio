@@ -10,11 +10,14 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
+	z-index: 1000;
 }
 .logoContainer {
 	margin-right: auto;
 	margin-left: 5%;
 	font-size: 2rem;
+}
+#logo{
 	font-family: "Alex Brush";
 }
 .navsContainer {
@@ -25,7 +28,8 @@
 	margin-right: 1rem;
 }
 .navsContainer > .navs {
-	width: 6.5rem;
+	width: max-content;
+	/* width: 6.5rem; */
 	border-radius: 0.5rem;
 	padding: 0.5rem 1rem 0.5rem 1rem;
 	/* margin-left: 1rem; */
@@ -101,7 +105,9 @@
 		display: none;
 	}
 	.selectTheme {
-		margin-left: 1rem;
+		margin-left: auto;
+		margin-right: 1rem;
+		/* background-color: aqua; */
 	}
 	.colorSelector {
 		margin-left: 1rem;
@@ -111,9 +117,6 @@
 	.selectMode {
 		width: 4rem;
 		height: 1.8rem;
-	}
-	.selectMode:hover {
-		cursor: pointer;
 	}
 	/* .menu{
 		margin-right: 1.5rem;

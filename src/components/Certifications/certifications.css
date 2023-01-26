@@ -1,5 +1,5 @@
 .certifications{
-    margin-top: 10rem;
+    margin-top: 5rem;
     font-family: "Barlow Condensed";
 }
 #certification-title{
@@ -23,7 +23,8 @@
 }
 @media (min-width:300px) and (max-width:700px) {
     .certificate-card{
-        grid-template-columns: repeat(2,40%);
+        grid-template-columns: repeat(1,100%);
+        /* flex:1 1 30%; */
     }
 
 }

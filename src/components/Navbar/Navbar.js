@@ -92,9 +92,9 @@ function Navbar(props) {
                     <div className="navsContainer">
                         <div className="navs centered active" id="navElement1" onClick={() => handleNavActive(1)}>Home</div>
                         <div className="navs centered" id="navElement2" onClick={() => handleNavActive(2)}>Education</div>
-                        <div className="navs centered" id="navElement3" onClick={() => handleNavActive(3)}>Element 3</div>
-                        <div className="navs centered" id="navElement4" onClick={() => handleNavActive(4)}>Element 4</div>
-                        <div className="navs centered" id="navElement5" onClick={() => handleNavActive(5)}>Element 5</div>
+                        <div className="navs centered" id="navElement3" onClick={() => handleNavActive(3)}>Certifications</div>
+                        <div className="navs centered" id="navElement4" onClick={() => handleNavActive(4)}>Projects</div>
+                        <div className="navs centered" id="navElement5" onClick={() => handleNavActive(5)}>Resume</div>
                     </div>
                 </Zoom>
                 <div className="selectTheme">
@@ -115,13 +115,6 @@ function Navbar(props) {
                     </label>
                 </div>
             </div>
-            {/* <div className="mob-nav" style={{ color: props.theme.color, display: isVisible ?  "flex" :"none" }}>
-                <div className="navs" id="navElement1" onClick={() => handleNavActive(1)}>Element 1</div>
-                <div className="navs" id="navElement2" onClick={() => handleNavActive(2)}>Education</div>
-                <div className="navs" id="navElement3" onClick={() => handleNavActive(3)}>Element 3</div>
-                <div className="navs" id="navElement4" onClick={() => handleNavActive(4)}>Element 4</div>
-                <div className="navs" id="navElement5" onClick={() => handleNavActive(5)}>Element 5</div>
-            </div> */}
             <Dropdown handleNav={handleNavActive} display={isVisible?"flex":"none"} />
         </div>
     )

@@ -1,31 +1,34 @@
-@media (min-width: 768px) {
-	.certificate {
-		height: 15rem;
-	}
-	.cert-image {
-		border-radius: inherit;
-		height: 8rem;
-	}
+.certificate {
+	height: 15rem;
+	border: 2px solid;
+	border-radius: 10px;
+}
+.cert-image {
+	border-radius: inherit;
+	height: 8rem;
+}
 
-	.cert-title {
-		font-size: 2rem;
-		margin-top: 0.5rem;
-	}
-	.instructor {
-		font-size: 1.5rem;
-		margin-top: 1rem;
-	}
-	.overlay-link {
-		height: 8rem;
-	}
-	#overlay-text {
-		font-size: 2rem;
-		font-weight: 700;
-	}
+.cert-title {
+	font-size: 2rem;
+	margin-top: 0.5rem;
+}
+.instructor {
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+.overlay-link {
+	height: 8rem;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#overlay-text {
+	font-size: 2rem;
+	font-weight: 700;
 }
 @media (max-width: 700px) {
 	.certificate {
-		height: 10rem;
+		height: 12rem;
+		border-radius: 7px;
 	}
 	.cert-image {
 		border-radius: inherit;
@@ -34,18 +37,17 @@
 
 	.cert-title {
 		font-size: 1.5rem;
-		margin-top: 0.5rem;
 	}
 	.instructor {
 		font-size: 1.2rem;
-		margin-top: 1rem;
 	}
 	.overlay-link {
 		height: 5rem;
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
 	}
 	#overlay-text {
 		font-size: 1.5rem;
-		font-weight: 700;
 	}
 }
 .cert-body {
@@ -70,7 +72,7 @@
 }
 @keyframes move-in {
 	0% {
-		margin-top: -1rem;
+		margin-top: -4rem;
 		opacity: 0.5;
 	}
 	100% {
@@ -82,14 +84,15 @@
     opacity: 0.5;
 } */
 .cert-overlay:hover #overlay-text {
-	animation: move-in 0.5s ease-in-out 1 normal forwards;
+	animation: move-in 0.2s ease-in-out 1 normal forwards;
 }
-.cert-overlay:hover .overlay-link{
-	background-color: gray;
+.cert-overlay:hover .overlay-link {
+	background-color: black;
 	opacity: 0.7;
 }
 #overlay-text {
 	opacity: 0;
+	color: aqua;
 	text-decoration: none;
 	/* border: 2px solid; */
 	padding: 5px 10px;

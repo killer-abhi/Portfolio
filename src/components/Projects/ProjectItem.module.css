@@ -1,6 +1,9 @@
 .projectItem{
     width: 30%;
     height: 12rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     /* background-color: aqua; */
 }
 .projectItem h2{
@@ -9,16 +12,25 @@
     font-weight: 700;
 }
 .description{
-    margin-top: 2rem;
     font-size: 1.5rem;
     text-align: justify;
 }
 .controls{
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+.projectLink{
+    margin-top: auto;
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
 }
 .projectItem:hover{
     cursor: pointer;
     animation: zoom 0.2s ease-in-out normal forwards;
+}
+.dateUpdated{
+    margin-left: auto;
 }
 @keyframes zoom {
     0%{
