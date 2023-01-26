@@ -8,7 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 //Navbar CSS
 import './navbar.css';
 
-import ColorCards from "./ColorCards";
+import ColorModal from "./ColorModal";
 import Dropdown from "./Dropdown";
 
 import Data from "../Data";
@@ -16,8 +16,7 @@ import Data from "../Data";
 function Navbar(props) {
 
     const [mode, setMode] = useState("light");
-    const [colorCard, setColorCard] = useState('none');
-
+    const [isColorModalShown,setColorModalShown]=useState(false);
     const [navActive, setNavActive] = useState(1);
 
     function handleNavActive(index) {
@@ -62,15 +61,7 @@ function Navbar(props) {
     }
 
     function handleColorSelector() {
-        // setColorCard(!colorCard);
-        if (colorCard === 'grid') {
-
-            setColorCard("none");
-        }
-        else {
-
-            setColorCard("grid");
-        }
+        setColorModalShown(prev=>!prev);
     }
     function changeTheme(newColor) {
         console.log(newColor);
@@ -112,7 +103,9 @@ function Navbar(props) {
                         <div id="darkModeBtn" style={{ display: "none" }}><DarkModeIcon /></div>
                     </div>
                     <div className="colorSelector" onClick={handleColorSelector} style={{ backgroundColor: props.theme.color }}>
-                        <ColorCards display={colorCard} theme={props.theme} selectColor={changeTheme} mode={mode} />
+                        {
+                            isColorModalShown&&<ColorModal theme={props.theme} selectColor={changeTheme} mode={mode} onConfirm={handleColorSelector} />
+                        }
                     </div>
                     <input type="checkbox" id="burger-toggle" onClick={handleMenu} />
                     <label htmlFor="burger-toggle" className="burger-menu">
