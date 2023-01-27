@@ -1,0 +1,62 @@
+.contactMe{
+    margin: 10rem auto;
+    /* background-color: aqua; */
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: aquamarine; */
+    /* width: 50%; */
+}
+.avatar img{
+    border: 5px solid purple;
+    border-radius: 50%;
+    height: 25rem;
+    width: 25rem;
+    object-fit: contain;
+}
+.contactCard{
+    margin-top: 4rem;
+    text-align: center;
+    width: 40%;
+}
+.contactCard h1{
+    font-size: 3rem;
+    color: purple;
+}
+.contactCard div{
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.contactLinks{
+    display: flex;
+    justify-content: center;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+}
+.resumeBtn{
+    margin-top: 2rem;
+    height: 3rem;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: purple;
+    color:white
+}
+.resumeBtn:hover{
+    cursor: pointer;
+    border: 2px solid purple;
+    background-color: white;
+    color: purple;
+}

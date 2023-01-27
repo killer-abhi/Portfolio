@@ -1,17 +1,11 @@
 import React, { useEffect } from "react";
 import Data from "../Data";
 import Typewriter from 'typewriter-effect/dist/core';
-import CoverImg from "../asset/Web-Design-PNG-Transparent.png";
+import profileAvatar from "../asset/logo.png";
 
 import "./home.css";
-//icons
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
 
+import SocialLinks from "../SocialLinks/SocialLinks";
 // const linkIcons=[GitHubIcon,LinkedInIcon,TwitterIcon,InstagramIcon,EmailIcon];
 
 function Home(props) {
@@ -47,25 +41,10 @@ function Home(props) {
                 <div className="rolling-text">
                     I am a &nbsp; <span id="typer" style={{color:Data.extraColors[0]}}></span>
                 </div>
-                <div className="connect">
-                    <div className="connect-link centered"><a href={Data.profileLinks.githubLink}><GitHubIcon fontSize="large" /></a></div>
-                    <div className="connect-link centered"><a href={Data.profileLinks.linkedInLink}><LinkedInIcon fontSize="large" /></a></div>
-                    <div className="connect-link centered"><a href={Data.profileLinks.twitterLink}><TwitterIcon fontSize="large" /></a></div>
-                    <div className="connect-link centered"><a href={Data.profileLinks.instaLink}><InstagramIcon fontSize="large" /></a></div>
-                    <div className="connect-link centered"><a href={Data.profileLinks.emailLink}><EmailIcon fontSize="large" /></a></div>
-
-                    {/* {
-                        Data.Links.map((item,index)=>{
-                            return(
-                                <div className="connect-link centered"><a href={Data.Links[index]}><GitHubIcon fontSize="large"/></a></div>
-                            )
-                        })
-                    } */}
-
-                </div>
+                <SocialLinks className="connect"/>
             </div>
             <div className="cover-image">
-                <img src={CoverImg} alt="" srcSet="" />
+                <img src={profileAvatar} alt="" srcSet="" />
             </div>
         </div>
     )

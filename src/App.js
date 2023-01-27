@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Education from './components/Education/Education';
 import Certifications from "./components/Certifications/Certifications";
 import Projects from "./components/Projects/Project";
+import ContactMe from "./components/Contact Me/Contact";
 
 function App(){
 
@@ -28,6 +29,7 @@ function App(){
             {/* <Education theme={theme}/> */}
             {/* <Certifications/> */}
             {/* <Projects/> */}
+            {/* <ContactMe/> */}
             <Footer/>
         </div>
     )
