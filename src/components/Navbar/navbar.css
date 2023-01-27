@@ -84,8 +84,10 @@
 	margin-left: auto;
 	margin-right: 0.5rem;
 }
-
-.menu,input,.mob-nav {
+.selectTheme input{
+	display: none;
+}
+.menu,.mob-nav {
 	display: none;
 }
 .centered {

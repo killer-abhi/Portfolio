@@ -8,6 +8,7 @@ import Education from './components/Education/Education';
 import Certifications from "./components/Certifications/Certifications";
 import Projects from "./components/Projects/Project";
 import ContactMe from "./components/Contact Me/Contact";
+import GetInTouch from "./components/Get In Touch/GetInTouch";
 
 function App(){
 
@@ -25,11 +26,12 @@ function App(){
     return(
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
-            <Home/>
+            {/* <Home/> */}
             {/* <Education theme={theme}/> */}
             {/* <Certifications/> */}
             {/* <Projects/> */}
             {/* <ContactMe/> */}
+            <GetInTouch/>
             <Footer/>
         </div>
     )

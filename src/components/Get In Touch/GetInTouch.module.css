@@ -1,0 +1,38 @@
+.getInTouch{
+    margin: 10rem auto; 
+    /* padding: 2rem; */
+    width: 90%;
+    border: 2px solid purple;
+    border-radius: 5px;
+    display: flex;
+}
+.getInTouchCard{
+    margin: 2rem;
+    width: 40%;
+}
+.getInTouchCard h1{
+    font-size: 3rem;
+}
+.getInTouchCard p{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.contactCard{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.contactIcon{
+    width: 4rem;
+    height: 4rem;
+    background-color: purple;
+    border-radius: 50%;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactValue{
+    margin-left: 2rem;
+    font-size: 2rem;
+}

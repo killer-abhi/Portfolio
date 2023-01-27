@@ -1,0 +1,32 @@
+.contactFormCard{
+    margin: 2rem;
+    width: 50%;
+    /* background-color: aqua; */
+}
+.contactFormCard h1{
+    font-size: 3rem;
+}
+.Inputs{
+    background-color: inherit;
+    margin-left: 2rem;
+    border: none;
+    height: 4rem;
+    color: black;
+    padding: 0px 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+.contactForm textarea{
+    padding-top: 1rem;
+    width: 70%;
+    height: 10rem;
+    resize: none;
+}
+.Inputs:hover{
+    background-color: antiquewhite;
+}
+.sendBtn{
+    margin: 2rem 2rem;
+}

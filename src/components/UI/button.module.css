@@ -1,0 +1,16 @@
+.btn{
+    height: 3rem;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: purple;
+    color:white
+}
+.btn:hover{
+    cursor: pointer;
+    border: 2px solid purple;
+    background-color: white;
+    color: purple;
+}
