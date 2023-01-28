@@ -13,7 +13,7 @@ const ProjectItem = (props) => {
             <p className={classes.description}>Project Description</p>
             <div className={classes.controls}>
                 <div className={classes.projectLink}>
-                    <a href="#"><StarIcon fontSize="large" /></a>
+                    <a href="#" style={{color:'orange'}}><StarIcon fontSize="large" /></a>
                     <a href="#"><GitHubIcon fontSize="large" /></a>
                 </div>
                 <p className={classes.dateUpdated}>Last Updated On 12 3 3839</p>

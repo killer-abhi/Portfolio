@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./project.module.css";
-import projectCoverImg from "../asset/project-cover.svg";
+import projectCoverImg from "../asset/project-cover10.png";
 import ProjectItem from "./ProjectItem";
 import Data from "../Data";
 import Button from "../UI/Button";
@@ -15,7 +15,7 @@ const Projects = (props) => {
                     <img src={projectCoverImg} alt="" />
                 </section>
                 <section className={styles.projectHeader}>
-                    <h1>Projects</h1>
+                    <h1><span>My Recent </span><span style={{color:'purple'}}>Works</span></h1>
                     <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, harum! Et quibusdam, in exercitationem optio enim harum aliquid dolorum. Laudantium.</div>
                 </section>
             </div>
