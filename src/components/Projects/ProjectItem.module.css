@@ -42,7 +42,8 @@
 }
 @media (max-width:768px) {
     .projectItem{
-        height: 10rem;
+        height: 12rem;
+        /* min-width: 40%; */
         min-width: 20rem;
     }
     .projectItem h2{

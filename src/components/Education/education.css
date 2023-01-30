@@ -1,15 +1,15 @@
 .education{
-    padding-top: 6rem;
+    /* padding-top:1rem; */
 }
 .education-header{
     display: flex;
     gap: 5rem;
     width: 80%;
-    margin: 5rem auto;
+    margin: 0rem auto;
     font-family: "Barlow Condensed";
 }
 #image{
-    margin: 2rem auto;
+    margin: 3rem auto;
     height: 30rem;
     width: 30rem;
 }
@@ -18,7 +18,7 @@
     object-fit: cover;
 }
 .coding-profile{
-    margin-top: 3rem;
+    margin-top: 5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -75,7 +75,7 @@
         font-weight: 700;
     }
     .coding-profile-links{
-        margin-top: 2rem;
+        margin-top: 1rem;
         gap: 1rem;
     }
 }

@@ -8,6 +8,15 @@
 }
 .App{
     /* max-width: ; */
-    margin:0rem auto;
+    /* margin:0rem auto; */
     /* transition:all 0.25s linear 0s; */
+}
+.app-content{
+    margin-top: 5rem;
+}
+@media (max-width:768px) {
+    .app-content{
+        margin-top: 4rem;
+    }
+    
 }

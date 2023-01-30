@@ -35,6 +35,7 @@
 .contactValue{
     margin-left: 2rem;
     font-size: 2rem;
+    color: purple;
 }
 
 @media (max-width:768px) {

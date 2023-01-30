@@ -7,13 +7,15 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SendIcon from '@mui/icons-material/Send';
 import CallIcon from '@mui/icons-material/Call';
 
-const DUMMY_DATA = ['Location', 'email', '8728782782'];
+import Data from "../Data";
+
+const data = [Data.personalData.address,Data.personalData.email, Data.personalData.mobNo];
 
 const GetInTouch = (props) => {
 
     const Icons=[<LocationOnIcon fontSize="large"/>,<SendIcon fontSize="large"/>,<CallIcon fontSize="large"/>];
 
-    const contactDetails = DUMMY_DATA.map((item, index) =>
+    const contactDetails = data.map((item, index) =>
         <div className={classes.contactCard} key={index}>
             <div className={classes.contactIcon}>{Icons[index]}</div>
             <div className={classes.contactValue}>{item}</div>

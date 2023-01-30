@@ -1,5 +1,5 @@
 .projects {
-	margin: 5rem auto;
+	margin: 0rem auto;
 	display: flex;
 	width: 80%;
 	align-items: center;
@@ -27,53 +27,32 @@
 	margin-top: 2rem;
 	font-size: 1.8rem;
 }
-.projectList{
+.projectHeading {
+	font-size: 3rem;
+	color: purple;
+	text-align: center;
+}
+.projectList {
 	display: flex;
 	flex-wrap: wrap;
 	/* background-color: aquamarine; */
-	gap:1rem;
+	gap: 1rem;
 	justify-content: center;
 	margin: 2rem auto;
 	width: 90%;
 }
-.moreProject{
+.moreProject {
 	display: flex;
 	justify-content: center;
 }
-/* .moreProjectBtn{
-	width: max-content;
-	font-size: 1.5rem;
-	padding: 5px 10px;
-	background-color: transparent;
-	border: 1px solid black;
-	border-radius: 5px;
-	border-color: inherit;
-} */
-.moreProjectBtn {
-    font: inherit;
-    border: 1px solid #700485;
-    background: #4f025f;
-    color: white;
-    padding: 0.75rem 3.5rem;
-    cursor: pointer;
-    font-size: 1.4rem;
-    border-radius: 2px;
-  }
-  
-  .moreProjectBtn:hover,
-  .moreProjectBtn:active {
-    background: #741188;
-    border-color: #741188;
-  }
-  
-  @media (max-width:768px) {
-	.projects{
+@media (max-width: 768px) {
+	.projects {
 		margin: 0rem auto;
 		flex-direction: column;
 		width: 90%;
 	}
 	.projectImg img {
-		margin-top: 5rem;
+		margin-top: 2rem;
 		height: 15rem;
 	}
 	.projectHeader {

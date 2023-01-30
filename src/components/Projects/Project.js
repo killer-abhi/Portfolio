@@ -6,6 +6,8 @@ import ProjectItem from "./ProjectItem";
 import Data from "../Data";
 import Button from "../UI/Button";
 
+import ProgrammingSkills from "../Professional Skillset/ProgrammingSkills";
+
 const Projects = (props) => {
     let projects=Data.DUMMY_PROJECTS;
     return (
@@ -19,6 +21,8 @@ const Projects = (props) => {
                     <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, harum! Et quibusdam, in exercitationem optio enim harum aliquid dolorum. Laudantium.</div>
                 </section>
             </div>
+            <ProgrammingSkills/>
+            <h1 className={styles.projectHeading}>My Projects</h1>
             <div className={styles.projectList}>
                 {projects.map((item)=>{
                     return <ProjectItem key={item.id} project={item} />

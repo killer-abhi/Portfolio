@@ -95,7 +95,7 @@
 	align-items: center;
 	justify-content: center;
 }
-@media (min-width: 300px) and (max-width: 600px) {
+@media (max-width: 768px) {
 	.navbar {
 		height: 4rem;
 	}
@@ -182,7 +182,7 @@
 		left: 25%;
 		width: 50%;
 		height: 3px;
-		background: yellow;
+		background: purple;
 		border-radius: 10px;
 		overflow: hidden;
 		transition: 0.5s;

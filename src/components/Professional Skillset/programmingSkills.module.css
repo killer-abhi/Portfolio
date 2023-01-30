@@ -1,0 +1,30 @@
+.mainCard{
+    text-align: center;
+    margin-top: 2rem;
+}
+.mainCard h1{
+    font-size: 2.5rem;
+}
+.skillSetCard{
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+    width: 90%;
+}
+.skillItem{
+    width: 15rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid purple;
+    border-radius: 10px;
+}
+.skillItem svg{
+    height: 5rem;
+    width: 5rem;
+    /* color: inherit; */
+}

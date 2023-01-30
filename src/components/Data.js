@@ -1,7 +1,10 @@
 const personalData = {
     firstName: "Abhishek",
     lastName: "Kumar",
-    nickName:"<  killer - abhi >"
+    nickName:"<  killer - abhi >",
+    mobNo:"2892927822",
+    email:"abcd@gmail.com",
+    address:"Farrukhabad , U.P , India"
 }
 
 const lightBgThemeColors = ["red", "green", "blue", "yellow", "darkgray", "pink", "grey", "cyan"];

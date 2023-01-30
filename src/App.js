@@ -7,31 +7,35 @@ import Footer from './components/Footer/Footer';
 import Education from './components/Education/Education';
 import Certifications from "./components/Certifications/Certifications";
 import Projects from "./components/Projects/Project";
-import ContactMe from "./components/Contact Me/Contact";
+import AboutMe from "./components/About Me/AboutMe";
 import GetInTouch from "./components/Get In Touch/GetInTouch";
+import ProgrammingSkills from "./components/Professional Skillset/ProgrammingSkills";
 
-function App(){
+function App() {
 
-    const [theme,setTheme]=useState({
-        backgroundColor:"rgb(237, 249, 254)",
-        color:"black"
+    const [theme, setTheme] = useState({
+        backgroundColor: "rgb(237, 249, 254)",
+        color: "black"
     })
 
-    function changeTheme(newTheme){
-        setTheme(prevTheme=>{
+    function changeTheme(newTheme) {
+        setTheme(prevTheme => {
             return newTheme;
         });
     }
 
-    return(
+    return (
         <div className="App" style={theme}>
             <Navbar theme={theme} changeColor={changeTheme} />
-            {/* <Home/> */}
-            {/* <Education theme={theme}/> */}
-            {/* <Certifications/> */}
-            {/* <Projects/> */}
-            <ContactMe/>
-            <Footer/>
+            <div className="app-content">
+                {/* <Home/> */}
+                {/* <Education theme={theme}/> */}
+                {/* <Certifications/> */}
+                {/* <Projects/> */}
+                <AboutMe />
+                {/* <ProgrammingSkills/> */}
+            </div>
+            <Footer />
         </div>
     )
 }
