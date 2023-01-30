@@ -1,5 +1,5 @@
 .contactMe{
-    margin: 10rem auto;
+    margin: 5rem auto;
     /* background-color: aqua; */
     width: 90%;
     display: flex;
@@ -45,4 +45,26 @@
 }
 .resumeBtn{
     margin-top: 2rem;
+}
+
+@media (max-width:768px) {
+    .contactMe{
+        flex-direction: column;
+    }
+    .avatar{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* background-color: aquamarine; */
+        /* width: 50%; */
+        margin: 2rem auto;
+    }
+    .avatar img{
+        height: 15rem;
+        width: 15rem;
+    }
+    .contactCard{
+        margin: 0rem auto;
+        width: 90%;
+    }
 }

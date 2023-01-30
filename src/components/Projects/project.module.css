@@ -27,24 +27,6 @@
 	margin-top: 2rem;
 	font-size: 1.8rem;
 }
-@media (max-width:500px) {
-	.projects{
-		margin: 0rem auto;
-		flex-direction: column;
-		width: 90%;
-	}
-	.projectImg img {
-		height: 20rem;
-	}
-	.projectHeader {
-		width: 100%;
-	}
-	.projectHeader div {
-		margin-top: 1rem;
-		font-size: 1.5rem;
-	}
-}
-
 .projectList{
 	display: flex;
 	flex-wrap: wrap;
@@ -84,3 +66,21 @@
     border-color: #741188;
   }
   
+  @media (max-width:768px) {
+	.projects{
+		margin: 0rem auto;
+		flex-direction: column;
+		width: 90%;
+	}
+	.projectImg img {
+		margin-top: 5rem;
+		height: 15rem;
+	}
+	.projectHeader {
+		width: 100%;
+	}
+	.projectHeader div {
+		margin-top: 1rem;
+		font-size: 1.5rem;
+	}
+}

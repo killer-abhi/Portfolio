@@ -8,11 +8,14 @@
     margin: 5rem auto;
     font-family: "Barlow Condensed";
 }
-
-#image img{
+#image{
+    margin: 2rem auto;
     height: 30rem;
     width: 30rem;
-    /* object-fit: cover; */
+}
+#image img{
+    height: 30rem;
+    object-fit: cover;
 }
 .coding-profile{
     margin-top: 3rem;
@@ -37,4 +40,42 @@
 .coding-profile-links{
     margin-top: 2rem;
     gap: 2rem;
+}
+@media (max-width:768px) {
+    .education{
+        padding-top: 0rem;
+    }
+    .education-header{
+        flex-direction: column;
+        width: 90%;
+    }
+    #image{
+        height: 15rem;
+        width: 20rem;
+    }
+    #image img{
+        height: 20rem;
+        width: 20rem;
+        object-fit: contain;
+    }
+    .coding-profile{
+        margin-top: 0rem;
+        width: 100%;
+    }
+    #sub-title1{
+        color: purple;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    #sub-title2{
+        margin-top: 1.5rem;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .coding-profile-links{
+        margin-top: 2rem;
+        gap: 1rem;
+    }
 }

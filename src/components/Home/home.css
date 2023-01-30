@@ -1,6 +1,8 @@
 .Home{
     margin-top: 5rem;
-    height: 37rem;
+    /* height: 37rem; */
+    /* background-color: aqua; */
+    height: auto;
 }
 .home-content{
     display: flex;
@@ -43,6 +45,7 @@
     font-weight: 600;
 }
 .cover-image{
+    margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,49 +55,18 @@
     object-fit:cover;
 }
 
-/* For Tablet View Only */
-@media (min-width:550px)and (max-width:768px) {
-    .Home{
-        margin-top: 0rem;
-        height: 37rem;
-        display: flex;
-        flex-direction: column;
-    }
-    .home-content{
-        width: 80%;
-    }
-   
-    .greeting{
-        font-size: 1.5rem;
-    }
-    #name-div{
-        font-size: 2rem;
-    }
-    #name{
-        font-size: 2.5rem;
-    }
-    .rolling-text{
-        font-size: 1.5rem;
-    }
-    .cover-image img{
-        height: 200px;
-        width: 300px;
-    }
-    .connect{
-        width: 20rem;
-        background-color: aqua;
-    }
-}
-
 /* For Mobile View Only */
 @media (min-width:250px)and (max-width:768px) {
     .Home{
-        margin-top: 0rem;
+        /* margin-top: 5rem; */
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        height: auto;
     }
     .home-content{
+        margin-top: 2rem;
         width: 80%;
+        /* background-color: aqua; */
     }
     .greeting{
         font-size: 1.5rem;
@@ -105,11 +77,15 @@
     .rolling-text{
         font-size: 1.5rem;
     }
+    .cover-image{
+        margin-top: 2rem;
+    }
     .cover-image img{
-        height: 200px;
-        width: 300px;
+        height: 15rem;
+        object-fit: cover;
     }
     .connect{
         width: 90%;
+        margin: 2rem auto;
     }
 }

@@ -61,3 +61,36 @@ li{
     /* list-style-image:url() ; */
     list-style-type: square;
 }
+
+@media (max-width:768px) {
+    .degree{
+        width: 90%;
+        margin-top: 5rem;
+    }
+    .degree-card{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #img{
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+    }
+    .degree-wrapper{
+       margin-left: 0rem;
+        width: 90%;
+        /* box-shadow: 2px 2px 5px purple;
+        border-bottom: 1px solid purple;
+        border-left: 1px solid purple;
+        border-right: 1px solid purple; */
+    }
+    #college-name{
+        font-size: 1.8rem;
+    }
+    #course{
+        font-size: 1.4rem;
+    }
+    #course-duration{
+        font-size: 1.2rem;
+    }
+}

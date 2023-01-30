@@ -1,5 +1,5 @@
 .contactFormCard {
-	margin: 2rem;
+	margin: 2rem auto;
 	width: 50%;
 	/* background-color: aqua; */
 }
@@ -54,4 +54,26 @@
 }
 .sent .Inputs{
 	color:rgb(156, 156, 156);
+}
+@media (max-width:768px) {
+	.contactFormCard {
+		width: 90%;
+	}
+	.contactFormCard h1 {
+		margin-left: 0rem;
+		font-size: 2.5rem
+	}
+	.Inputs {
+		margin-left: 0rem;
+		width: auto;
+		max-width: 100%;
+	}
+	.contactForm textarea {
+		height: 10rem;
+		width: 80%;
+		resize: none;
+	}
+	.sendBtn {
+		margin-left: 0rem;
+	}
 }

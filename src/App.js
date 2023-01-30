@@ -30,8 +30,7 @@ function App(){
             {/* <Education theme={theme}/> */}
             {/* <Certifications/> */}
             {/* <Projects/> */}
-            {/* <ContactMe/> */}
-            <GetInTouch/>
+            <ContactMe/>
             <Footer/>
         </div>
     )
