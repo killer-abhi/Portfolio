@@ -10,12 +10,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
 import classes from "./socialLinks.module.css";
+import { useSelector } from "react-redux";
 
 const SocialLinks = (props) => {
 
+    const nonThemeColor=useSelector(state=>state.nonThemeColor);
+
     return (
-        <div className={`${classes.socialLinks} ${props.className}`}>
-            <a href={Data.profileLinks.githubLink}><GitHubIcon fontSize="large" /></a>
+        <div className={`${classes.socialLinks} ${props.className}`} style={{color:nonThemeColor}}>
+            <a href={Data.profileLinks.githubLink} ><GitHubIcon fontSize="large" /></a>
             <a href={Data.profileLinks.linkedInLink}><LinkedInIcon fontSize="large" /></a>
             <a href={Data.profileLinks.twitterLink}><TwitterIcon fontSize="large" /></a>
             <a href={Data.profileLinks.instaLink}><InstagramIcon fontSize="large" /></a>

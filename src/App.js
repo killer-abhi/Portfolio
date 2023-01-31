@@ -11,27 +11,21 @@ import AboutMe from "./components/About Me/AboutMe";
 import GetInTouch from "./components/Get In Touch/GetInTouch";
 import ProgrammingSkills from "./components/Professional Skillset/ProgrammingSkills";
 
+import { useDispatch, useSelector } from "react-redux";
+import { themeActions } from "./store/theme";
+
+
 function App() {
 
-    const [theme, setTheme] = useState({
-        backgroundColor: "rgb(237, 249, 254)",
-        color: "black"
-    })
-
-    function changeTheme(newTheme) {
-        setTheme(prevTheme => {
-            return newTheme;
-        });
-    }
-
+    const theme=useSelector(state=>state.theme);
     return (
         <div className="App" style={theme}>
-            <Navbar theme={theme} changeColor={changeTheme} />
+            <Navbar theme={theme}/>
             <div className="app-content">
-                {/* <Home/> */}
-                {/* <Education theme={theme}/> */}
-                {/* <Certifications/> */}
-                {/* <Projects/> */}
+                <Home/>
+                <Education theme={theme}/>
+                <Certifications/>
+                <Projects/>
                 <AboutMe />
                 {/* <ProgrammingSkills/> */}
             </div>

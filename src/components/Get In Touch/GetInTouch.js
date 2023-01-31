@@ -8,11 +8,13 @@ import SendIcon from '@mui/icons-material/Send';
 import CallIcon from '@mui/icons-material/Call';
 
 import Data from "../Data";
+import { useSelector } from "react-redux";
 
 const data = [Data.personalData.address,Data.personalData.email, Data.personalData.mobNo];
 
 const GetInTouch = (props) => {
 
+    const nonThemeColor=useSelector(state=>state.nonThemeColor);
     const Icons=[<LocationOnIcon fontSize="large"/>,<SendIcon fontSize="large"/>,<CallIcon fontSize="large"/>];
 
     const contactDetails = data.map((item, index) =>
@@ -25,7 +27,7 @@ const GetInTouch = (props) => {
     return (
         <div className={classes.getInTouch}>
             <div className={classes.getInTouchCard}>
-                <h1>Get In Touch</h1>
+                <h1 style={{color:nonThemeColor}}>Get In Touch</h1>
                 <p>I would love to hear from you, so whether you need a quote, have a question or just want to say hello, please feel free to drop me a line.</p>
                 <div>
                     {contactDetails}

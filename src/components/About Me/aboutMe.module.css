@@ -13,6 +13,7 @@
     /* width: 50%; */
 }
 .avatar img{
+    margin-top: 2rem;
     border: 5px solid purple;
     border-radius: 50%;
     height: 25rem;

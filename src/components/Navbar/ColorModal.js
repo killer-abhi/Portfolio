@@ -1,5 +1,6 @@
 import React from "react";
 import { createPortal } from "react-dom";
+import { useSelector } from "react-redux";
 
 // import Zoom from '@mui/material/Zoom';
 import Data from "../Data";
@@ -12,8 +13,10 @@ const Backdrop = props => {
 }
 
 function ColorModal(props) {
+
+    const mode=useSelector(state=>state.mode);
     let defaultColors;
-    if (props.mode === 'light') {
+    if (mode === 'light') {
         defaultColors = Data.lightBgThemeColors;
     }
     else {

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import classes from "./contactForm.module.css";
 import Button from "../UI/Button";
 import useInput from "../../hooks/useInput";
+import { useSelector } from "react-redux";
 
 const ContactForm = (props) => {
 
@@ -72,9 +73,10 @@ const ContactForm = (props) => {
     const messageInputClasses = messageInputHasError ? `${classes.Inputs} ${classes.invalidInput}` : classes.Inputs;
     const formClasses = isSent ? `${classes.contactForm} ${classes.sent}` : classes.contactForm;
 
+    const nonThemeColor=useSelector(state=>state.nonThemeColor);
     return (
         <div className={classes.contactFormCard}>
-            <h1>Leave A Message</h1>
+            <h1 style={{color:nonThemeColor}}>Leave A Message</h1>
             <form action="" onSubmit={formSubmitHandler} className={formClasses}>
                 <input value={enteredName}
                     onBlur={nameBlurHandler}

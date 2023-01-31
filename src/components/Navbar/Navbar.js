@@ -3,10 +3,13 @@ import Zoom from '@mui/material/Zoom';
 
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import CloseIcon from '@mui/icons-material/Close';
 //Navbar CSS
 import './navbar.css';
+
+import { useDispatch, useSelector } from "react-redux";
+import { themeActions } from "../../store/theme";
 
 import ColorModal from "./ColorModal";
 import Dropdown from "./Dropdown";
@@ -15,7 +18,16 @@ import Data from "../Data";
 
 function Navbar(props) {
 
-    const [mode, setMode] = useState("light");
+    const dispatch=useDispatch();
+
+    const changeColor=(newColor)=> {
+        console.log(newColor);
+        dispatch(themeActions.changeThemeColor(newColor));
+    }
+
+    const mode=useSelector(state=>state.mode);
+
+    // const [mode, setMode] = useState("light");
     const [isColorModalShown,setColorModalShown]=useState(false);
     const [navActive, setNavActive] = useState(1);
 
@@ -24,52 +36,32 @@ function Navbar(props) {
         setNavActive(prevActive => {
             let prevNav = document.getElementById("navElement" + prevActive);
             prevNav.classList.toggle('active');
-            console.log(prevActive);
+            // console.log(prevActive);
             return (index);
         })
         let currentNav = document.getElementById("navElement" + index);
         currentNav.classList.toggle('active');
     }
-
+    
     function handleModeChange() {
 
         const lightModeBtn = document.getElementById("lightModeBtn")
         const darkModeBtn = document.getElementById("darkModeBtn")
-        const newTheme = {
-            color: props.theme.color,
-            backgroundColor: ""
-        }
-        console.log(mode);
         if (mode === 'light') {
-            setMode("dark");
-            newTheme.backgroundColor = "black";
-            newTheme.color = "white";
             lightModeBtn.style.display = "none";
             darkModeBtn.style.display = "block";
             darkModeBtn.style.color = "black";
         }
         else {
-            setMode("light");
-            newTheme.backgroundColor = "rgb(237, 249, 254)";
-            newTheme.color = "black";
             lightModeBtn.style.display = "block";
             darkModeBtn.style.display = "none";
             lightModeBtn.style.color = "white";
         }
-        props.changeColor(newTheme);
-        // handleColorSelector();
+        dispatch(themeActions.toggleMode());
     }
 
     function handleColorSelector() {
         setColorModalShown(prev=>!prev);
-    }
-    function changeTheme(newColor) {
-        console.log(newColor);
-        const newTheme = {
-            color: newColor,
-            backgroundColor: props.theme.backgroundColor
-        }
-        props.changeColor(newTheme);
     }
 
     const [isVisible, setIsVisible] = useState(false);
@@ -78,6 +70,7 @@ function Navbar(props) {
         setIsVisible(!isVisible);
         console.log(isVisible);
     }
+
     return (
         <div className="main">
             <div className="navbar" style={props.theme}>
@@ -104,7 +97,7 @@ function Navbar(props) {
                     </div>
                     <div className="colorSelector" onClick={handleColorSelector} style={{ backgroundColor: props.theme.color }}>
                         {
-                            isColorModalShown&&<ColorModal theme={props.theme} selectColor={changeTheme} mode={mode} onConfirm={handleColorSelector} />
+                            isColorModalShown&&<ColorModal selectColor={changeColor} onConfirm={handleColorSelector} />
                         }
                     </div>
                     <input type="checkbox" id="burger-toggle" onClick={handleMenu} />
