@@ -18,13 +18,21 @@
     width: 15rem;
     height: 10rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 3px solid purple;
     border-radius: 10px;
 }
+.name{
+    display: none;
+}
 .skillItem svg{
-    height: 5rem;
-    width: 5rem;
+    /* background-color: aquamarine; */
+    height: 6rem;
+    width: 6rem;
     /* color: inherit; */
+}
+.skillItem svg:hover{
+    cursor: pointer;
 }

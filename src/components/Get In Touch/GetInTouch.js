@@ -7,10 +7,10 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SendIcon from '@mui/icons-material/Send';
 import CallIcon from '@mui/icons-material/Call';
 
-import Data from "../Data";
+import PersonalData from "../Data/PersonalData";
 import { useSelector } from "react-redux";
 
-const data = [Data.personalData.address,Data.personalData.email, Data.personalData.mobNo];
+const data = [PersonalData.address,PersonalData.email, PersonalData.mobNo];
 
 const GetInTouch = (props) => {
 

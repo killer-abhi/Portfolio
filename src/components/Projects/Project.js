@@ -3,13 +3,15 @@ import React from "react";
 import styles from "./project.module.css";
 import projectCoverImg from "../asset/project-cover10.png";
 import ProjectItem from "./ProjectItem";
-import Data from "../Data";
+import ProjectsData from "../Data/ProjectsData";
 import Button from "../UI/Button";
 
 import ProgrammingSkills from "../Professional Skillset/ProgrammingSkills";
+import { useSelector } from "react-redux";
 
 const Projects = (props) => {
-    let projects=Data.DUMMY_PROJECTS;
+    const nonThemeColor=useSelector(state=>state.nonThemeColor);
+    let projects=ProjectsData.DUMMY_PROJECTS;
     return (
         <React.Fragment>
             <div className={styles.projects}>
@@ -17,12 +19,12 @@ const Projects = (props) => {
                     <img src={projectCoverImg} alt="" />
                 </section>
                 <section className={styles.projectHeader}>
-                    <h1><span>My Recent </span><span style={{color:'purple'}}>Works</span></h1>
+                    <h1><span style={{color:nonThemeColor}}>My Recent </span><span style={{color:'purple'}}>Works</span></h1>
                     <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, harum! Et quibusdam, in exercitationem optio enim harum aliquid dolorum. Laudantium.</div>
                 </section>
             </div>
             <ProgrammingSkills/>
-            <h1 className={styles.projectHeading}>My Projects</h1>
+            <h1 className={styles.projectHeading} style={{color:nonThemeColor}}>My Projects</h1>
             <div className={styles.projectList}>
                 {projects.map((item)=>{
                     return <ProjectItem key={item.id} project={item} />

@@ -4,31 +4,26 @@ import "./degree.css";
 import image from "../asset/uptu_logo.png";
 
 import Card from "../UI/Card";
+import EducationData from "../Data/EducationData"
+import { useSelector } from "react-redux";
 
 function Degree(props) {
 
-    let color=props.theme.color;
-    let myStyle = {
-        boxShadow: "1px 1px 5px "+color,
-        borderBottom: "1px solid "+color,
-        borderLeft: "1px solid "+color,
-        borderRight: "1px solid "+color
-    }
-
+    const nonThemeColor=useSelector(state=>state.nonThemeColor);
     return (
         <div className="degree">
-            <div id="title">
+            <div id="title" style={{color:nonThemeColor}}>
                 Degree Pursuing
             </div>
             <div className="degree-card">
                 <div className="centered" id="img">
                     <img src={image} alt="degree" srcset="" />
                 </div>
-                <Card className="degree-wrapper" style={myStyle}>
+                <Card className="degree-wrapper">
                     <div className="degree-info" style={{color:"purple"}}>
-                        <div id="course-duration">2021 - Present</div>
-                        <div id="college-name">Rajkiya Engineering College, Ambedkar Nagar</div>
-                        <div id="course">B.Tech in Information Technology</div>
+                        <div id="course-duration" style={{color:nonThemeColor}}>{EducationData.couseStartYear} - {EducationData.courseEndYear}</div>
+                        <div id="college-name">{EducationData.collegeName}</div>
+                        <div id="course" style={{color:nonThemeColor}}>{EducationData.courseName}</div>
                     </div>
                     <div className="details">
                         <ul>

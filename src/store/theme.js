@@ -4,7 +4,7 @@ const initialThemeState={
     mode:'light',
     theme:{
         color:'black',
-        backgroundColor:"rgb(237, 249, 254)"
+        backgroundColor:"rgb(237, 249, 254)",
     },
     nonThemeColor:'black'
 };

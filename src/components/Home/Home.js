@@ -1,16 +1,19 @@
 import React, { useEffect } from "react";
-import Data from "../Data";
 import Typewriter from 'typewriter-effect/dist/core';
 import profileAvatar from "../asset/logo.png";
-
+import PersonalData from "../Data/PersonalData";
 import "./home.css";
+import {autoTypeData} from "../Data/PersonalData";
 
 import SocialLinks from "../SocialLinks/SocialLinks";
+import { useSelector } from "react-redux";
 // const linkIcons=[GitHubIcon,LinkedInIcon,TwitterIcon,InstagramIcon,EmailIcon];
 
 function Home(props) {
+
+    const nonThemeColor=useSelector(state=>state.nonThemeColor);
     function handleTyper(){
-        let textItems = Data.typerStrings;
+        let textItems = autoTypeData;
         var autoTyper = document.getElementById('typer');
         console.log(autoTyper);
         new Typewriter(autoTyper, {
@@ -33,13 +36,13 @@ function Home(props) {
                     <div className="greeting">
                         Hi There !
                     </div>
-                    <div id="name-div">I'm <span id="name" style={{color:Data.extraColors[0]}}>{Data.personalData.firstName}&nbsp;{Data.personalData.lastName}</span></div>
-                    <div id="nick-name">
-                        {Data.personalData.nickName}
+                    <div id="name-div">I'm &nbsp;<span id="name" style={{color:'purple'}}>{PersonalData.firstName}&nbsp;{PersonalData.lastName}</span></div>
+                    <div id="nick-name" style={{color:nonThemeColor}}>
+                        {PersonalData.nickName}
                     </div>
                 </div>
                 <div className="rolling-text">
-                    I am a &nbsp; <span id="typer" style={{color:Data.extraColors[0]}}></span>
+                    I am a &nbsp; <span id="typer" style={{color:'purple'}}></span>
                 </div>
                 <SocialLinks className="connect"/>
             </div>

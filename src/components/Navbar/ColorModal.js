@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { useSelector } from "react-redux";
 
 // import Zoom from '@mui/material/Zoom';
-import Data from "../Data";
+import ThemeData from "../Data/ThemeData"
 // import Card from '../UI/Card';
 
 import "./colorModal.css";
@@ -17,10 +17,10 @@ function ColorModal(props) {
     const mode=useSelector(state=>state.mode);
     let defaultColors;
     if (mode === 'light') {
-        defaultColors = Data.lightBgThemeColors;
+        defaultColors = ThemeData.lightBgThemeColors;
     }
     else {
-        defaultColors = Data.darkBgThemeColors;
+        defaultColors = ThemeData.darkBgThemeColors;
     }
 
     function handleClick(index) {

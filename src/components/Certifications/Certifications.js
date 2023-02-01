@@ -2,11 +2,10 @@ import React from "react";
 
 import "./certifications.css";
 import CreateCertificate from "./CreateCertificate";
-import Data from "../Data";
-
+import CertificatesData from "../Data/CertificatesData"
 const Certifications = (props) => {
 
-    let certificationsList = Data.certificationsList;
+    let certificationsList = CertificatesData.certificationsList;
 
     return (
         <div className="certifications">
@@ -14,7 +13,7 @@ const Certifications = (props) => {
             <div className="certificate-card">
                 {certificationsList.map((item, id) => {
                     return (
-                        <CreateCertificate key={id} item={item} />
+                        <CreateCertificate key={id} item={item}/>
                     )
                 })}
             </div>

@@ -20,7 +20,7 @@ const ProjectItem = (props) => {
                     <a href="#" style={{color:'orange'}}><StarIcon fontSize="large" /></a>
                     <a href="#" style={{color:nonThemeColor}}><GitHubIcon fontSize="large" /></a>
                 </div>
-                <p className={classes.dateUpdated}>Last Updated On 12 3 3839</p>
+                <p className={classes.dateUpdated} style={{color:nonThemeColor}}>Last Updated On 12 3 3839</p>
             </div>
         </Card>
     )

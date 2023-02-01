@@ -14,19 +14,18 @@ import ProgrammingSkills from "./components/Professional Skillset/ProgrammingSki
 import { useDispatch, useSelector } from "react-redux";
 import { themeActions } from "./store/theme";
 
-
 function App() {
 
     const theme=useSelector(state=>state.theme);
     return (
         <div className="App" style={theme}>
-            <Navbar theme={theme}/>
+            <Navbar/>
             <div className="app-content">
                 <Home/>
-                <Education theme={theme}/>
-                <Certifications/>
-                <Projects/>
-                <AboutMe />
+                {/* <Education/> */}
+                {/* <Certifications/> */}
+                {/* <Projects/> */}
+                {/* <AboutMe /> */}
                 {/* <ProgrammingSkills/> */}
             </div>
             <Footer />

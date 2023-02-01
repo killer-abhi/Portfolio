@@ -1,7 +1,6 @@
 import React from "react";
 
-import Data from "../Data";
-
+import SocialData from "../Data/SocialData";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -11,6 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 import classes from "./socialLinks.module.css";
 import { useSelector } from "react-redux";
+console.log(SocialData);
 
 const SocialLinks = (props) => {
 
@@ -18,11 +18,11 @@ const SocialLinks = (props) => {
 
     return (
         <div className={`${classes.socialLinks} ${props.className}`} style={{color:nonThemeColor}}>
-            <a href={Data.profileLinks.githubLink} ><GitHubIcon fontSize="large" /></a>
-            <a href={Data.profileLinks.linkedInLink}><LinkedInIcon fontSize="large" /></a>
-            <a href={Data.profileLinks.twitterLink}><TwitterIcon fontSize="large" /></a>
-            <a href={Data.profileLinks.instaLink}><InstagramIcon fontSize="large" /></a>
-            <a href={Data.profileLinks.emailLink}><EmailIcon fontSize="large" /></a>
+            <a href={SocialData.githubLink} ><GitHubIcon fontSize="large" /></a>
+            <a href={SocialData.linkedInLink}><LinkedInIcon fontSize="large" /></a>
+            <a href={SocialData.twitterLink}><TwitterIcon fontSize="large" /></a>
+            <a href={SocialData.instaLink}><InstagramIcon fontSize="large" /></a>
+            <a href={SocialData.emailLink}><EmailIcon fontSize="large" /></a>
 
         </div>
     )
