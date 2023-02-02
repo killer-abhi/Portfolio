@@ -37,15 +37,10 @@
 	padding: 0.5rem 1rem 0.5rem 1rem;
 	/* margin-left: 1rem; */
 	font-size: 1.5rem;
-	font-family: "Barlow Condensed", sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .active {
 	/* margin-left: 1rem; */
 	font-size: 1.5rem;
-	font-family: "Barlow Condensed", sans-serif;
 	border-bottom-left-radius: 0rem;
 	border-bottom-right-radius: 0rem;
 	border-bottom: 3px solid purple;
@@ -235,7 +230,6 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 		font-size: 1.3rem;
-		font-family: "Barlow Condensed";
 		width: 6.5rem;
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem 0.5rem 1rem;
@@ -252,7 +246,6 @@
 		padding: 0.5rem 1rem 0.5rem 1rem;
 		font-size: 1.3rem;
 		text-align: justify;
-		font-family: "Barlow Condensed", sans-serif;
 	}
 	.active {
 		width: max-content;

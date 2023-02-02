@@ -11,10 +11,10 @@ import './navbar.css';
 import { themeActions } from "../../store/theme";
 
 import ColorModal from "./ColorModal";
-import Dropdown from "./Dropdown";
+import Routes from "./Routes";
 
 import PersonalData from "../Data/PersonalData";
-function Navbar(props) {
+const Navbar=(props)=>{
     const menuRef = useRef();
     const dispatch = useDispatch();
     const nonThemeColor = useSelector(state => state.nonThemeColor);
@@ -72,22 +72,7 @@ function Navbar(props) {
                     </div>
                 </div>
                 <div className="navsContainer" style={{ color: nonThemeColor }}>
-                    <NavLink activeClassName="active" to="/home">
-                        <div className="navs">Home</div>
-                    </NavLink>
-
-                    <NavLink to="/education" activeClassName="active">
-                        <div className="navs">Education</div>
-                    </NavLink>
-                    <NavLink to="/certifications" activeClassName="active">
-                        <div className="navs">Certifications</div>
-                    </NavLink>
-                    <NavLink to="/projects" activeClassName="active">
-                        <div className="navs">Projects</div>
-                    </NavLink>
-                    <NavLink to="/about-me" activeClassName="active">
-                        <div className="navs">About Me</div>
-                    </NavLink>
+                    <Routes/>
                 </div>
                 <div className="selectTheme">
                     <div className="selectMode" onClick={handleModeChange}>
@@ -109,7 +94,9 @@ function Navbar(props) {
                     </label>
                 </div>
             </div>
-            {isDropDownVisible && <Dropdown />}
+            {isDropDownVisible&&<div className="mob-nav" style={{ color: nonThemeColor }}>
+                <Routes />
+            </div>}
         </div>
     )
 }
