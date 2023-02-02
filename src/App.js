@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 import './app.css';
 //components
 import Navbar from './components/Navbar/Navbar';
@@ -11,22 +12,41 @@ import AboutMe from "./components/About Me/AboutMe";
 import GetInTouch from "./components/Get In Touch/GetInTouch";
 import ProgrammingSkills from "./components/Professional Skillset/ProgrammingSkills";
 
-import { useDispatch, useSelector } from "react-redux";
-import { themeActions } from "./store/theme";
+import { useSelector } from "react-redux";
+// import { themeActions } from "./store/theme";
 
 function App() {
 
-    const theme=useSelector(state=>state.theme);
+    const theme = useSelector(state => state.theme);
     return (
         <div className="App" style={theme}>
-            <Navbar/>
+            <Navbar />
             <div className="app-content">
-                <Home/>
-                {/* <Education/> */}
-                {/* <Certifications/> */}
-                {/* <Projects/> */}
-                {/* <AboutMe /> */}
-                {/* <ProgrammingSkills/> */}
+                <Switch>
+                    <Route path="/" exact>
+                        <Redirect to="/home"/>
+                    </Route>
+                    <Route path="/home">
+                        <Home />
+                    </Route>
+                    
+                    <Route path="/about-me">
+                        <AboutMe />
+                    </Route>
+                    
+                    <Route path="/education">
+                        <Education />
+                    </Route>
+
+                    <Route path="/certifications">
+                        <Certifications />
+                    </Route>
+
+                    <Route path="/projects">
+                        <Projects />
+                    </Route>
+                    {/* <ProgrammingSkills /> */}
+                </Switch>
             </div>
             <Footer />
         </div>
