@@ -18,6 +18,9 @@
     display: flex;
     align-items: center;
 }
+.controls p{
+    font-size: 1.2rem;
+}
 .projectLink{
     margin-top: auto;
     width: 5rem;

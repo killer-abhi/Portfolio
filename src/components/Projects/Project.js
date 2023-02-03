@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./project.module.css";
 import projectCoverImg from "../asset/project-cover10.png";
 import ProjectItem from "./ProjectItem";
-import ProjectsData from "../Data/ProjectsData";
+import ProjectsData from "../../Data/ProjectsData";
 import Button from "../UI/Button";
 
 import ProgrammingSkills from "../Professional Skillset/ProgrammingSkills";
@@ -20,7 +20,7 @@ const Projects = (props) => {
                 </section>
                 <section className={styles.projectHeader}>
                     <h1><span style={{color:nonThemeColor}}>My Recent </span><span style={{color:'purple'}}>Works</span></h1>
-                    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, harum! Et quibusdam, in exercitationem optio enim harum aliquid dolorum. Laudantium.</div>
+                    <div>My works makes use of vast variety of latest technology tools. My best experience is to create React projects and deploy them to web applications using Github Pages.</div>
                 </section>
             </div>
             <ProgrammingSkills/>

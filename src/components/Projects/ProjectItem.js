@@ -10,17 +10,25 @@ import { useSelector } from "react-redux";
 const ProjectItem = (props) => {
 
     const nonThemeColor=useSelector(state=>state.nonThemeColor);
+    let description=props.project.description;
+    if(description===''){
+        description=" project description";
+    }
+    if(description.length>120){
+        description=description.substr(0,120);
+        description=description+" ... ";
+    }
 
     return (
         <Card className={classes.projectItem} borderColor='purple'>
-            <h2 style={{color:nonThemeColor}}>Project Title</h2>
-            <p className={classes.description}>Project Description</p>
+            <h2 style={{color:'purple'}}>{props.project.projectTitle}</h2>
+            <p className={classes.description}>{description}</p>
             <div className={classes.controls}>
                 <div className={classes.projectLink}>
-                    <a href="#" style={{color:'orange'}}><StarIcon fontSize="large" /></a>
-                    <a href="#" style={{color:nonThemeColor}}><GitHubIcon fontSize="large" /></a>
+                    <a target="_blank" rel="noreferrer" href={props.project.sourceLink} style={{color:'orange'}}><StarIcon fontSize="large" /></a>
+                    <a target="_blank" rel="noreferrer" href={props.project.sourceLink} style={{color:nonThemeColor}}><GitHubIcon fontSize="large" /></a>
                 </div>
-                <p className={classes.dateUpdated} style={{color:nonThemeColor}}>Last Updated On 12 3 3839</p>
+                <p className={classes.dateUpdated} style={{color:nonThemeColor}}>Last Updated On : {props.project.lastUpdated}</p>
             </div>
         </Card>
     )

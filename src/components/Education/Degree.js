@@ -4,7 +4,7 @@ import "./degree.css";
 import image from "../asset/uptu_logo.png";
 
 import Card from "../UI/Card";
-import EducationData from "../Data/EducationData"
+import EducationData from "../../Data/EducationData"
 import { useSelector } from "react-redux";
 
 function Degree(props) {
@@ -12,39 +12,24 @@ function Degree(props) {
     const nonThemeColor=useSelector(state=>state.nonThemeColor);
     return (
         <div className="degree">
-            <div id="title" style={{color:nonThemeColor}}>
+            <h1 style={{color:nonThemeColor}}>
                 Degree Pursuing
-            </div>
+            </h1>
             <div className="degree-card">
-                <div className="centered" id="img">
+                <div className="degreeImage centered">
                     <img src={image} alt="degree" srcset="" />
                 </div>
-                <Card className="degree-wrapper">
-                    <div className="degree-info" style={{color:"purple"}}>
+                <Card className="degreeWrapper">
+                    <div className="degreeInfo" style={{color:"purple"}}>
                         <div id="course-duration" style={{color:nonThemeColor}}>{EducationData.couseStartYear} - {EducationData.courseEndYear}</div>
                         <div id="college-name">{EducationData.collegeName}</div>
                         <div id="course" style={{color:nonThemeColor}}>{EducationData.courseName}</div>
                     </div>
                     <div className="details">
                         <ul>
-                            <li>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores adipisci perspiciatis nobis velit, corrupti sed maxime minus! Harum, perferendis.</p>
-                            </li>
-                            <li>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores adipisci perspiciatis nobis velit, corrupti sed maxime minus! Harum, perferendis.</p>
-                            </li>
-                            <li>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores adipisci perspiciatis nobis velit, corrupti sed maxime minus! Harum, perferendis.</p>
-                            </li>
-                            <li>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores adipisci perspiciatis nobis velit, corrupti sed maxime minus! Harum, perferendis.</p>
-                            </li>
-                            <li>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores adipisci perspiciatis nobis velit, corrupti sed maxime minus! Harum, perferendis.</p>
-                            </li>
-                            <li>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores adipisci perspiciatis nobis velit, corrupti sed maxime minus! Harum, perferendis.</p>
-                            </li>
+                            {EducationData.details.map((item,index)=>
+                                <li key={index}>{item}</li>
+                            )}
                         </ul>
                     </div>
                 </Card>

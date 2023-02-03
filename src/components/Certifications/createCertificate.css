@@ -2,7 +2,7 @@
 	height: 15rem;
 	border: 2px solid purple;
 	border-radius: 10px;
-	min-width: 20rem;
+	min-width: 23rem;
 }
 .cert-image {
 	border-radius: inherit;
@@ -10,7 +10,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgb(135, 185, 135);
 }
 .cert-image svg{
 	height: 8rem;
@@ -34,6 +33,7 @@
 @media (max-width: 768px) {
 	.certificate {
 		height: 13rem;
+		min-width: 20rem;
 		border-radius: 7px;
 	}
 	.cert-image {
@@ -86,7 +86,7 @@
 	animation: move-in 0.2s ease-in-out 1 normal forwards;
 }
 .cert-overlay:hover .overlay-link {
-	background-color: rgb(11, 11, 11);
+	background-color: rgba(77, 92, 211, 0.632);
 	opacity: 1;
 }
 #overlay-text {

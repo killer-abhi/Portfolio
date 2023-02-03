@@ -1,10 +1,15 @@
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .degree{
     width: 80%;
     margin: 3rem auto;
     font-family: "Barlow Condensed";
     /* background-color: aqua; */
 }
-#title{
+.degree h1{
     text-align: center;
     font-size: 3rem;
     font-weight: 800;
@@ -15,18 +20,18 @@
     align-items: center;
     /* height: 20rem; */
 }
-#img{
+.degreeImage{
     height: 15rem;
     width: 15rem;
     border-radius: 50%;
     border:5px solid purple;
 }
-#img img{
+.degreeImage img{
     height: 10rem;
     width: 10rem;
     
 }
-.degree-wrapper{
+.degreeWrapper{
 
     margin-left: 2rem;
     width: 75%;
@@ -35,7 +40,7 @@
     border-left: 1px solid purple;
     border-right: 1px solid purple; */
 }
-.degree-info{
+.degreeInfo{
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     padding: 1rem;
@@ -55,12 +60,13 @@
 .details{
     padding: 1rem;
     margin-left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
-li{
+ul li{
     /* list-style-image:url() ; */
     list-style-type: square;
+    margin-top: 1rem;
 }
 
 @media (max-width:768px) {
@@ -72,12 +78,12 @@ li{
         flex-direction: column;
         gap: 2rem;
     }
-    #img{
+    .degreeImage{
         height: 15rem;
         width: 15rem;
         border-radius: 50%;
     }
-    .degree-wrapper{
+    .degreeWrapper{
        margin-left: 0rem;
         width: 90%;
         /* box-shadow: 2px 2px 5px purple;

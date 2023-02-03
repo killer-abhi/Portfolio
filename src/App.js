@@ -24,16 +24,16 @@ function App() {
             <div className="app-content">
                 <Switch>
                     <Route path="/" exact>
-                        <Redirect to="/home"/>
+                        <Redirect to="/home" />
                     </Route>
                     <Route path="/home">
                         <Home />
                     </Route>
-                    
+
                     <Route path="/about-me">
                         <AboutMe />
                     </Route>
-                    
+
                     <Route path="/education">
                         <Education />
                     </Route>
@@ -44,6 +44,9 @@ function App() {
 
                     <Route path="/projects">
                         <Projects />
+                    </Route>
+                    <Route path="*">
+                        <Redirect to="/home" />
                     </Route>
                     {/* <ProgrammingSkills /> */}
                 </Switch>

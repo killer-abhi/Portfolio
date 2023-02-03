@@ -7,7 +7,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SendIcon from '@mui/icons-material/Send';
 import CallIcon from '@mui/icons-material/Call';
 
-import PersonalData from "../Data/PersonalData";
+import PersonalData from "../../Data/PersonalData";
 import { useSelector } from "react-redux";
 
 const data = [PersonalData.address,PersonalData.email, PersonalData.mobNo];

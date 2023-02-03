@@ -21,7 +21,7 @@ const CreateCertificate = (props) => {
                 </div>
             </div>
             <div className="cert-body">
-                <div className="cert-image" style={{ color: nonThemeColor }}>
+                <div className="cert-image" style={{ color: nonThemeColor,backgroundColor:'lightblue' }}>
                     {certImage}
                 </div>
                 <div className="cert-info">

@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { useSelector } from "react-redux";
 
 // import Zoom from '@mui/material/Zoom';
-import ThemeData from "../Data/ThemeData"
+import ThemeData from "../../Data/ThemeData"
 // import Card from '../UI/Card';
 
 import "./colorModal.css";

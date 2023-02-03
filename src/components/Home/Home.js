@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Typewriter from 'typewriter-effect/dist/core';
 import profileAvatar from "../asset/logo.png";
-import PersonalData from "../Data/PersonalData";
-import "./home.css";
-import {autoTypeData} from "../Data/PersonalData";
+import PersonalData from "../../Data/PersonalData";
+import classes from "./home.css";
+import {autoTypeData} from "../../Data/PersonalData";
 
 import SocialLinks from "../SocialLinks/SocialLinks";
 import { useSelector } from "react-redux";
@@ -31,8 +31,7 @@ function Home(props) {
     return (
         <div className="Home centered">
             <div className="home-content">
-                <div className="personal-info">
-
+                {/* <div className="personal-info"> */}
                     <div className="greeting">
                         Hi There !
                     </div>
@@ -40,10 +39,11 @@ function Home(props) {
                     <div id="nick-name" style={{color:nonThemeColor}}>
                         {PersonalData.nickName}
                     </div>
-                </div>
+                {/* </div> */}
                 <div className="rolling-text">
                     I am a &nbsp; <span id="typer" style={{color:'purple'}}></span>
                 </div>
+                <p className="connect-text">Feel free to <span style={{color:'purple'}}>connect</span> with me.</p>
                 <SocialLinks className="connect"/>
             </div>
             <div className="cover-image">

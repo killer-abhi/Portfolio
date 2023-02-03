@@ -1,10 +1,8 @@
 import React from "react";
 
-import EducationImg1 from "../asset/mortarboard-education.svg";
-import EducationImg2 from "../asset/kindpng_1040086.png";
-import EducationImg3 from "../asset/kindpng_1578281.png";
-import EducationImg4 from "../asset/kindpng_2158189.png";
+import EducationImg from "../asset/kindpng_2158189.png";
 
+import Certifications from "../Certifications/Certifications";
 import Degree from "./Degree";
 import "./education.css";
 import { useSelector } from "react-redux";
@@ -15,7 +13,7 @@ function Education(props) {
         <div className="education">
             <div className="education-header">
                 <div id="image">
-                    <img src={EducationImg4} alt="" srcset="" />
+                    <img src={EducationImg} alt="" srcset="" />
                 </div>
                 <div className="coding-profile">
                     <div id="coding-title">
@@ -31,6 +29,7 @@ function Education(props) {
                 </div>
             </div>
             <Degree/>
+            <Certifications/>
         </div>
     )
 }

@@ -13,7 +13,7 @@ function Dropdown(props) {
                 <div className="navs">Education</div>
             </NavLink>
             <NavLink to="/certifications" activeClassName="active">
-                <div className="navs">Certifications</div>
+                {/* <div className="navs">Certifications</div> */}
             </NavLink>
             <NavLink to="/projects" activeClassName="active">
                 <div className="navs">Projects</div>

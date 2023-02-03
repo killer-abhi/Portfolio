@@ -1,9 +1,12 @@
 .Home{
     /* height: 37rem; */
-    margin-bottom: 2rem;
+    margin: 2rem auto ;
+    display: flex;
     height: auto;
+    width: 90%;
+    background-color: aqua;
 }
-.home-content{
+.homeContent{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -11,17 +14,20 @@
     width: 40%;
     height: 22rem;
 }
-.personal-info{
+/* .personalInfo{
     height: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+} */
+.personalInfo div{
+    margin-top: 1rem;
 }
 .greeting{
     font-size: 2rem;
     font-weight: 600;
 }
-#name-div{
+#nameDiv{
     font-weight: 600;
     font-size: 2.3rem;
 }
@@ -29,7 +35,7 @@
     font-size: 2.5rem;
     font-weight:700;
 }
-#nick-name{
+#nickName{
     font-size: 1.5rem;
     text-align: center;
     font-weight: 600;
@@ -41,35 +47,35 @@
     align-items: center;
     width: 50%;
 }
-.rolling-text{
+.rollingText{
     font-size: 2rem;
     font-weight: 600;
 }
-.cover-image{
+.avatar{
     margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cover-image img{
+.avatar img{
     height: 30rem;
     object-fit:cover;
 }
-.connect-text{
+.connectText{
     margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 /* For Mobile View Only */
-@media (max-width:768px) {
+@media (min-width:250px)and (max-width:768px) {
     .Home{
         /* margin-top: 5rem; */
         display: flex;
         flex-direction: column-reverse;
         height: auto;
     }
-    .home-content{
+    .homeContent{
         margin-top: 2rem;
         width: 80%;
         /* background-color: aqua; */
@@ -77,20 +83,20 @@
     .greeting{
         font-size: 1.5rem;
     }
-    #name-div{
+    #nameDiv{
         font-size: 2rem;
     }
-    .rolling-text{
+    .rollingText{
         font-size: 1.5rem;
     }
-    .cover-image{
+    .coverImage{
         margin-top: 2rem;
     }
-    .cover-image img{
+    .coverImage img{
         height: 15rem;
         object-fit: cover;
     }
-    .connect-text{
+    .connectText{
         margin-top: 1rem;
     }
     .connect{
