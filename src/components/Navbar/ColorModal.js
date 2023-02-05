@@ -16,11 +16,14 @@ function ColorModal(props) {
 
     const mode=useSelector(state=>state.mode);
     let defaultColors;
+    let colorCardBgColor;
     if (mode === 'light') {
         defaultColors = ThemeData.lightBgThemeColors;
+        colorCardBgColor='white';
     }
     else {
         defaultColors = ThemeData.darkBgThemeColors;
+        colorCardBgColor='black';
     }
 
     function handleClick(index) {
@@ -34,7 +37,7 @@ function ColorModal(props) {
                 document.getElementById("backdrop")
             )}
             {createPortal(
-                <div className="colorCard">
+                <div className="colorCard" style={{backgroundColor:colorCardBgColor}}>
                     {defaultColors.map((color, index) =>
                         <div key={index} onClick={() => handleClick(index)} style={{ backgroundColor: color }}></div>
                     )}

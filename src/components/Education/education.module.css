@@ -1,0 +1,114 @@
+.educationHeader{
+    display: flex;
+    gap: 5rem;
+    width: 80%;
+    margin: 0rem auto;
+    font-family: "Barlow Condensed";
+}
+.eduImg{
+    margin: 3rem auto;
+    height: 30rem;
+    width: 30rem;
+}
+.eduImg img{
+    height: 30rem;
+    object-fit: cover;
+}
+.educationCard{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.educationCard h1{
+    color: purple;
+    font-size: 5rem;
+    font-weight: 700;
+}
+.educationCard h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.codingInfo{
+    margin-top: 2rem;
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+.progressBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: antiquewhite; */
+    width: 100%;
+}
+.progressBar label{
+    text-align: center;
+    width: 20%;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.progressBar progress{
+    width: 80%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 1.8rem;
+}
+.progressBar progress::-webkit-progress-bar{
+    background-color: rgb(178, 129, 178);
+    border-radius: 0.5rem;
+}
+.progressBar progress::-webkit-progress-value{
+    animation: load 2s normal forwards;
+    border-radius: 0.5rem;
+    background-color: purple;
+}
+
+@keyframes load {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+@media (max-width:768px) {
+    .education{
+        padding-top: 0rem;
+    }
+    .educationHeader{
+        flex-direction: column;
+        width: 90%;
+    }
+    .eduImg{
+        height: 15rem;
+        width: 20rem;
+    }
+    .eduImg img{
+        height: 20rem;
+        width: 20rem;
+        object-fit: contain;
+    }
+    .educationCard{
+        margin-top: -2rem;
+        width: 100%;
+    }
+    .educationCard h1{
+        color: purple;
+        /* text-align: center; */
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    .educationCard h2{
+        /* margin-top: 1.5rem; */
+        /* text-align: center; */
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .progressBar label{
+        /* text-align: center; */
+        width: 30%;
+        font-size: 1.5rem;
+    }
+    .progressBar progress{
+        width: 70%;
+        height: 1.5rem;
+    }
+}

@@ -62,9 +62,24 @@ const ContactForm = (props) => {
         if (!enteredNameIsValid || !enteredEmailIsValid || !enteredMessageIsValid || !enteredPhoneIsValid) {
             return;
         }
+        const message={
+            name:enteredName+enteredLName,
+            email:enteredEmail,
+            phone:enteredPhone,
+            message:enteredMessage
+        }
         finishEnteringHandler();
+        sendMessageHanlder(message);
+    }
+    
+    const sendMessageHanlder=async(message)=>{
+        setBtnText((prevValue)=>'Sending ...');
+        await fetch('https://react-redux-47ef8-default-rtdb.firebaseio.com/portfolio-messages.json',{
+            method:'POST',
+            body:JSON.stringify(message)
+        });
         setIsSent(true);
-        setBtnText((prevValue) => 'Thank You')
+        setBtnText((prevValue) => 'Message Sent');
     }
 
     const finishEnteringHandler=()=>{

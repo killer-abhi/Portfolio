@@ -1,36 +1,41 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import EducationImg from "../asset/kindpng_2158189.png";
-
+import EducationData from "../../Data/EducationData";
 import Certifications from "../Certifications/Certifications";
 import Degree from "./Degree";
-import "./education.css";
+import classes from "./education.module.css";
 import { useSelector } from "react-redux";
 
 function Education(props) {
-    const nonThemeColor=useSelector(state=>state.nonThemeColor);
+    const nonThemeColor = useSelector(state => state.nonThemeColor);
+
+    const languagesDone=EducationData.codingStatus;
+    console.log(languagesDone);
     return (
-        <div className="education">
-            <div className="education-header">
-                <div id="image">
+        <Fragment>
+            <div className={classes.educationHeader}>
+                <div className={classes.eduImg}>
                     <img src={EducationImg} alt="" srcset="" />
                 </div>
-                <div className="coding-profile">
-                    <div id="coding-title">
-                        <p id="sub-title1">Education</p>
-                        <p id="sub-title2" style={{color:nonThemeColor}}>Basic Education and Qualifications</p>
-                    </div>
-                    <div className="coding-profile-links centered">
-                        <div className="links">link1</div>
-                        <div className="links">link2</div>
-                        <div className="links">link3</div>
-                        <div className="links">link4</div>
+                <div className={classes.educationCard}>
+                    <h1>Education</h1>
+                    <h2 style={{ color: nonThemeColor }}>Coding Statistics and Certifications</h2>
+                    <div className={classes.codingInfo}>
+                        {
+                            languagesDone.map((item,index) =>
+                                <div key={index} className={classes.progressBar}>
+                                    <label htmlFor={item.name}>{item.name}</label>
+                                    <progress id={item.name} value={item.percentDone} max="100"></progress>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>
-            <Degree/>
-            <Certifications/>
-        </div>
+            <Degree />
+            <Certifications />
+        </Fragment>
     )
 }
 export default Education;

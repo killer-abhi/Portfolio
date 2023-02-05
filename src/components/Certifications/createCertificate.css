@@ -86,7 +86,6 @@
 	animation: move-in 0.2s ease-in-out 1 normal forwards;
 }
 .cert-overlay:hover .overlay-link {
-	background-color: rgba(77, 92, 211, 0.632);
 	opacity: 1;
 }
 #overlay-text {

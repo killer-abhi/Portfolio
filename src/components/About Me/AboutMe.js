@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 
 import classes from './aboutMe.module.css';
-import AvatarImg from '../asset/profileImage2.png'
+import AvatarImg from '../asset/abhi.jpg'
 import PersonalData from '../../Data/PersonalData';
 import SocialLinks from '../SocialLinks/SocialLinks';
 import Button from "../UI/Button";
 import GetInTouch from '../Get In Touch/GetInTouch';
-const AboutMe = (props) => {
+const AboutMe = () => {
 
     return (
         <Fragment>
@@ -22,7 +22,9 @@ const AboutMe = (props) => {
                     <div className={classes.contactLinks}>
                         <SocialLinks className={classes.links} />
                     </div>
-                    <Button className={classes.resumeBtn}>See My Resume</Button>
+                    <a href={PersonalData.resumeLink}>
+                        <Button className={classes.resumeBtn}>See My Resume</Button>
+                    </a>
                 </div>
             </div>
             <GetInTouch />

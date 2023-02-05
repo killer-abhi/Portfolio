@@ -48,10 +48,12 @@
 }
 .navs:hover{
 	cursor: pointer;
-	border: 2px solid purple;
+	background-color: purple;
+	color: white;
+	/* border: 2px solid purple; */
 	filter: brightness(110%);
-	box-shadow: 0 0.5em 0.4em -0.4em purple;
-	transform: translateY(-0.2em);
+	/* box-shadow: 0 0.5em 0.4em -0.4em purple; */
+	/* transform: translateY(-0.2em); */
 }
 .selectTheme {
 	margin-right: 2rem;
