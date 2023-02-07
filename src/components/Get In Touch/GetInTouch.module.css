@@ -1,48 +1,56 @@
-.getInTouch{
-    margin: 5rem auto; 
-    /* padding: 2rem; */
-    width: 90%;
-    border: 2px solid purple;
-    border-radius: 5px;
-    display: flex;
+.getInTouch {
+	margin: 5rem auto;
+	/* padding: 2rem; */
+	width: 90%;
+	border: 2px solid purple;
+	border-radius: 5px;
+	display: flex;
 }
-.getInTouchCard{
-    margin: 2rem auto;
-    width: 40%;
+.getInTouchCard {
+	margin: 2rem auto;
+	width: 40%;
 }
-.getInTouchCard h1{
-    font-size: 3rem;
+.getInTouchCard h1 {
+	font-size: 3rem;
 }
-.getInTouchCard p{
-    margin-top: 1rem;
-    font-size: 1.5rem;
+.getInTouchCard p {
+	margin-top: 1rem;
+	font-size: 1.5rem;
 }
-.contactCard{
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
+.contactCard {
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
 }
-.contactIcon{
-    width: 4rem;
-    height: 4rem;
-    background-color: purple;
-    border-radius: 50%;
-    color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contactIcon {
+	width: 4rem;
+	height: 4rem;
+	background-color: purple;
+	border-radius: 50%;
+	color: aliceblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.contactValue{
-    margin-left: 2rem;
-    font-size: 2rem;
-    color: purple;
+.contactValue {
+	margin-left: 2rem;
+	font-size: 2rem;
+	color: purple;
 }
 
-@media (max-width:768px) {
-    .getInTouch{
-        flex-direction: column;
-    }
-    .getInTouchCard{
-        width: 90%;
-    }
+@media (max-width: 768px) {
+	.getInTouch {
+		flex-direction: column;
+	}
+	.getInTouchCard {
+		width: 90%;
+	}
+	.contactIcon {
+		width: 3rem;
+		height: 3rem;
+	}
+	.contactValue {
+        margin-left: 1rem;
+		font-size: 1.5rem;
+	}
 }

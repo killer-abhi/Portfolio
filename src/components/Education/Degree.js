@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./degree.css";
-import image from "../asset/uptu_logo.png";
+import UniversityImg from "../../Data/universityLogo.png";
 
 import Card from "../UI/Card";
 import EducationData from "../../Data/EducationData"
@@ -17,7 +17,7 @@ function Degree(props) {
             </h1>
             <div className="degree-card">
                 <div className="degreeImage centered">
-                    <img src={image} alt="degree" srcset="" />
+                    <img src={UniversityImg} alt="degree" srcset="" />
                 </div>
                 <Card className="degreeWrapper">
                     <div className="degreeInfo" style={{color:"purple"}}>
