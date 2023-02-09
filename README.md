@@ -30,4 +30,8 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 # Show your support
 
+Feel free to Fork this repo and use.
+
+New customizations and improvements are welcomed.
+
 Give a ⭐ if you like this website!
