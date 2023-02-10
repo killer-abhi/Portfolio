@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./certifications.css";
+import classes from "./certifications.module.css";
 import CreateCertificate from "./CreateCertificate";
 import CertificatesData from "../../Data/CertificatesData"
 import { useSelector } from "react-redux";
@@ -10,16 +10,16 @@ const Certifications = (props) => {
     let certificationsList = CertificatesData.certificationsList;
 
     return (
-        <div className="certifications">
-            <div id="certification-title" style={{color:nonThemeColor}}>Certifications</div>
-            <div className="certificate-card">
-                {certificationsList.map((item, id) => {
+        <React.Fragment>
+            <h1 style={{color:nonThemeColor}}>Certifications</h1>
+            <div className={classes.certificateCard}>
+                {certificationsList.map((item, index) => {
                     return (
-                        <CreateCertificate key={id} item={item}/>
+                        <CreateCertificate key={index} item={item}/>
                     )
                 })}
             </div>
-        </div>
+        </React.Fragment>
     )
 }
 export default Certifications;

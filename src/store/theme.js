@@ -2,6 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialThemeState={
     mode:'light',
+    uiColor:'purple',
     theme:{
         color:'black',
         backgroundColor:"rgb(237, 249, 254)",

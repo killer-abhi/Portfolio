@@ -23,7 +23,6 @@ const SocialLinks = (props) => {
             <a href={SocialData.twitterLink}><TwitterIcon fontSize="large" /></a>
             <a href={SocialData.instaLink}><InstagramIcon fontSize="large" /></a>
             <a href={SocialData.emailLink}><EmailIcon fontSize="large" /></a>
-
         </div>
     )
 };

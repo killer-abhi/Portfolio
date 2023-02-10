@@ -1,32 +1,38 @@
 .certificate {
 	height: 15rem;
-	border: 2px solid purple;
+	border: 2px solid;
 	border-radius: 10px;
 	min-width: 23rem;
 }
-.cert-image {
+.certImage {
 	border-radius: inherit;
 	height: 8rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.cert-image svg{
+.certImage svg{
 	height: 8rem;
 	width: 8rem;
 }
-.cert-info{
+.certInfo{
 	height: 7rem;
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
 }
-.overlay-link {
+.certInfo h1{
+	font-size: 2rem;
+}
+.certInfo h2{
+	font-size: 1.5rem;
+}
+.overlayLink {
 	height: 8rem;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
-#overlay-text {
+.overlayLink a{
 	font-size: 2rem;
 	font-weight: 700;
 }
@@ -36,30 +42,30 @@
 		min-width: 20rem;
 		border-radius: 7px;
 	}
-	.cert-image {
+	.certImage {
 		border-radius: inherit;
 		height: 7rem;
 	}
-	.cert-info{
+	.certInfo{
 		height: 6rem;
 	}
-	.overlay-link {
+	.overlayLink {
 		height: 7rem;
 		border-top-left-radius: 7px;
 		border-top-right-radius: 7px;
 	}
 }
-.cert-body {
+.certBody {
 	border-radius: 0.5rem;
 	text-align: center;
 	font-weight: 800;
 }
 
-.cert-overlay {
+.Overlay {
 	/* display: none; */
 	position: relative;
 }
-.overlay-link {
+.overlayLink {
 	/* display: none; */
 	opacity: 1;
 	position: absolute;
@@ -79,15 +85,15 @@
 		opacity: 1;
 	}
 }
-/* .cert-overlay:hover{
+/* .Overlay:hover{
     opacity: 0.5;
 } */
-.cert-overlay:hover #overlay-text {
+.Overlay:hover .overlayLink a{
 	animation: move-in 0.2s ease-in-out 1 normal forwards;
 }
-.cert-overlay:hover .overlay-link {
+.Overlay:hover .overlayLink {
 	opacity: 1;
 }
-#overlay-text {
+.overlayLink a{
 	opacity: 0;
 }

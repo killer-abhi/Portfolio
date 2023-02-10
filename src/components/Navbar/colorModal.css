@@ -22,46 +22,36 @@
 	align-items: center;
 	justify-content: center;
 	z-index: 100;
-	/* animation: slide 1s ease-in normal forwards; */
+	animation: fade 0.5s ease-out forwards;
 }
 
 .colorCard > div,
-.colorCard>div:hover {
+.colorCard > div:hover {
 	height: 3rem;
 	border-radius: 0.5rem;
-	animation: zoom 0.2s normal forwards;
 	cursor: pointer;
+	animation: zoom 0.2s ease forwards;
 }
-@media (min-width: 600px) {
-	.colorCard > div {
-		height: 3rem;
-		border-radius: 0.5rem;
-		animation: zoom 0.2s normal forwards;
-	}
-}
-@media (min-width: 300px) and (max-width: 600px) {
+@media (max-width: 768px) {
 	.colorCard {
 		right: 1rem;
 		top: 5rem;
 		border-radius: 0.5rem;
 	}
-	.colorCard > div {
-		height: 2.5rem;
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
-
 @keyframes zoom {
 	0% {
-		transform: scale(0, 0);
+		transform: scale(0);
 	}
-	25% {
-		transform: scale(0.25, 0.25);
-	}
-	75% {
-		transform: scale(0.75, 0.75);
-	}
-
 	100% {
-		transform: scale(1, 1);
+		transform: scale(1);
 	}
 }

@@ -26,7 +26,8 @@ const EducationData={
     couseStartYear:"2021",
     courseEndYear:"Present",
     details:[
-        'I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.',
+        'I joined my college in 2021. Cleared First Year with a good academic performance.',
+        'I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, COA, AI etc.',
         ' Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.'
     ],
     codingStatus:languagesDone

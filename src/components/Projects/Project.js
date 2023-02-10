@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 
 const Projects = (props) => {
     const nonThemeColor=useSelector(state=>state.nonThemeColor);
+    const uiColor=useSelector(state=>state.uiColor);
     let projects=ProjectsData.DUMMY_PROJECTS;
     return (
         <React.Fragment>
@@ -19,15 +20,15 @@ const Projects = (props) => {
                     <img src={projectCoverImg} alt="" />
                 </section>
                 <section className={styles.projectHeader}>
-                    <h1><span style={{color:nonThemeColor}}>My Recent </span><span style={{color:'purple'}}>Works</span></h1>
+                    <h1><span style={{color:nonThemeColor}}>My Recent </span><span style={{color:uiColor}}>Works</span></h1>
                     <div>My works makes use of vast variety of latest technology tools. My best experience is to create React projects and deploy them to web applications using Github Pages.</div>
                 </section>
             </div>
             <ProgrammingSkills/>
             <h1 className={styles.projectHeading} style={{color:nonThemeColor}}>My Projects</h1>
             <div className={styles.projectList}>
-                {projects.map((item)=>{
-                    return <ProjectItem key={item.id} project={item} />
+                {projects.map((item,index)=>{
+                    return <ProjectItem key={index} project={item} />
                 })}
             </div>
             <div className={styles.moreProject}>

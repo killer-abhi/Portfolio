@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import './app.css';
 //components
@@ -9,14 +9,13 @@ import Education from './components/Education/Education';
 import Certifications from "./components/Certifications/Certifications";
 import Projects from "./components/Projects/Project";
 import AboutMe from "./components/About Me/AboutMe";
-import GetInTouch from "./components/Get In Touch/GetInTouch";
-import ProgrammingSkills from "./components/Professional Skillset/ProgrammingSkills";
+// import GetInTouch from "./components/Get In Touch/GetInTouch";
+// import ProgrammingSkills from "./components/Professional Skillset/ProgrammingSkills";
 
 import { useSelector } from "react-redux";
 // import { themeActions } from "./store/theme";
 
 function App() {
-
     const theme = useSelector(state => state.theme);
     return (
         <div className="App" style={theme}>

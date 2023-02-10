@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import Typewriter from 'typewriter-effect/dist/core';
 import profileAvatar from "../asset/logo.png";
 import PersonalData from "../../Data/PersonalData";
-import classes from "./home.css";
-import {autoTypeData} from "../../Data/PersonalData";
+import classes from "./home.module.css";
+import { autoTypeData } from "../../Data/PersonalData";
 
 import SocialLinks from "../SocialLinks/SocialLinks";
 import { useSelector } from "react-redux";
@@ -11,13 +11,14 @@ import { useSelector } from "react-redux";
 
 function Home(props) {
 
-    const nonThemeColor=useSelector(state=>state.nonThemeColor);
-    function handleTyper(){
+    const nonThemeColor = useSelector(state => state.nonThemeColor);
+    const uiColor=useSelector(state=>state.uiColor);
+    function handleTyper() {
         let textItems = autoTypeData;
         var autoTyper = document.getElementById('typer');
         console.log(autoTyper);
         new Typewriter(autoTyper, {
-    
+
             strings: textItems,
             autoStart: true,
             pauseFor: 1000,
@@ -25,31 +26,28 @@ function Home(props) {
         });
     }
     useEffect(
-        handleTyper,
-        []
-    );
+        handleTyper
+        , []);
     return (
-        <div className="Home centered">
-            <div className="home-content">
-                {/* <div className="personal-info"> */}
-                    <div className="greeting">
-                        Hi There !
-                    </div>
-                    <div id="name-div">I'm &nbsp;<span id="name" style={{color:'purple'}}>{PersonalData.firstName}&nbsp;{PersonalData.lastName}</span></div>
-                    <div id="nick-name" style={{color:nonThemeColor}}>
-                        {PersonalData.nickName}
-                    </div>
-                {/* </div> */}
-                <div className="rolling-text">
-                    I am a &nbsp; <span id="typer" style={{color:'purple'}}></span>
+        <main>
+            <div className={classes.homeContent}>
+                <h1 className={classes.greeting}>
+                    Hi There !
+                </h1>
+                <h2>I'm &nbsp;<span id="name" style={{ color: uiColor }}>{PersonalData.firstName}&nbsp;{PersonalData.lastName}</span></h2>
+                <h3 style={{ color: nonThemeColor }}>
+                    {PersonalData.nickName}
+                </h3>
+                <div className={classes.autoText}>
+                    I am a &nbsp; <span id="typer" style={{ color: uiColor }}></span>
                 </div>
-                <p className="connect-text">Feel free to <span style={{color:'purple'}}>connect</span> with me.</p>
-                <SocialLinks className="connect"/>
+                <p className={classes.connectText}>Feel free to <span style={{ color: uiColor }}>connect</span> with me.</p>
+                <SocialLinks className={classes.links} />
             </div>
-            <div className="cover-image">
+            <div className={classes.avatarImage}>
                 <img src={profileAvatar} alt="" srcSet="" />
             </div>
-        </div>
+        </main>
     )
 }
 export default Home;

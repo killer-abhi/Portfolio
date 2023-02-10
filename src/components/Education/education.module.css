@@ -23,7 +23,6 @@
     /* background-color: aqua; */
 }
 .educationCard h1{
-    color: purple;
     font-size: 5rem;
     font-weight: 700;
 }
@@ -37,6 +36,7 @@
     /* background-color: aquamarine; */
 }
 .progressBar{
+    margin-top: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -47,6 +47,12 @@
     text-align: center;
     width: 20%;
     font-size: 1.8rem;
+    font-weight: 800;
+}
+.progressBar h5{
+    text-align: center;
+    width: 15%;
+    font-size: 1.5rem;
     font-weight: 800;
 }
 .progressBar progress{
@@ -91,7 +97,6 @@
         width: 100%;
     }
     .educationCard h1{
-        color: purple;
         /* text-align: center; */
         font-size: 4rem;
         font-weight: 700;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./degree.css";
+import classes from "./degree.module.css";
 import UniversityImg from "../../Data/universityLogo.png";
 
 import Card from "../UI/Card";
@@ -9,31 +9,30 @@ import { useSelector } from "react-redux";
 
 function Degree(props) {
 
-    const nonThemeColor=useSelector(state=>state.nonThemeColor);
+    const uiColor=useSelector(state=>state.uiColor);
+    const nonThemeColor = useSelector(state => state.nonThemeColor);
+
     return (
-        <div className="degree">
-            <h1 style={{color:nonThemeColor}}>
+        <div className={classes.degreeMain}>
+            <h1 style={{ color: nonThemeColor }}>
                 Degree Pursuing
             </h1>
-            <div className="degree-card">
-                <div className="degreeImage centered">
+            <div className={classes.degreeCard}>
+                <div className={`${classes.degreeImage} centered`} style={{borderColor:uiColor}}>
                     <img src={UniversityImg} alt="degree" srcset="" />
                 </div>
-                <Card className="degreeWrapper">
-                    <div className="degreeInfo" style={{color:"purple"}}>
-                        <div id="course-duration" style={{color:nonThemeColor}}>{EducationData.couseStartYear} - {EducationData.courseEndYear}</div>
-                        <div id="college-name">{EducationData.collegeName}</div>
-                        <div id="course" style={{color:nonThemeColor}}>{EducationData.courseName}</div>
+                <Card className={classes.degreeWrapper}>
+                    <div className={classes.degreeInfo}>
+                        <h3 style={{ color: nonThemeColor }}>{EducationData.couseStartYear} - {EducationData.courseEndYear}</h3>
+                        <h1 style={{ color: uiColor }}>{EducationData.collegeName}</h1>
+                        <h2 style={{ color: nonThemeColor }}>{EducationData.courseName}</h2>
                     </div>
-                    <div className="details">
-                        <ul>
-                            {EducationData.details.map((item,index)=>
-                                <li key={index}>{item}</li>
-                            )}
-                        </ul>
-                    </div>
+                    <ul className={classes.details}>
+                        {EducationData.details.map((item, index) =>
+                            <li key={index}>{item}</li>
+                        )}
+                    </ul>
                 </Card>
-
             </div>
         </div>
     )

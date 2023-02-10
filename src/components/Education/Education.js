@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 
 function Education(props) {
     const nonThemeColor = useSelector(state => state.nonThemeColor);
+    const uiColor=useSelector(state=>state.uiColor);
 
     const languagesDone=EducationData.codingStatus;
     console.log(languagesDone);
@@ -19,7 +20,7 @@ function Education(props) {
                     <img src={EducationImg} alt="" srcset="" />
                 </div>
                 <div className={classes.educationCard}>
-                    <h1>Education</h1>
+                    <h1 style={{color:uiColor}}>Education</h1>
                     <h2 style={{ color: nonThemeColor }}>Coding Statistics and Certifications</h2>
                     <div className={classes.codingInfo}>
                         {
@@ -27,6 +28,7 @@ function Education(props) {
                                 <div key={index} className={classes.progressBar}>
                                     <label htmlFor={item.name}>{item.name}</label>
                                     <progress id={item.name} value={item.percentDone} max="100"></progress>
+                                    <h5>{item.percentDone}%</h5>
                                 </div>
                             )
                         }

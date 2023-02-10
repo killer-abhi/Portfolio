@@ -14,7 +14,7 @@
 }
 .avatar img{
     margin-top: 2rem;
-    border: 5px solid purple;
+    border: 5px solid;
     border-radius: 50%;
     height: 25rem;
     width: 25rem;
@@ -27,7 +27,6 @@
 }
 .contactCard h1{
     font-size: 3rem;
-    color: purple;
 }
 .contactCard div{
     margin-top: 1rem;

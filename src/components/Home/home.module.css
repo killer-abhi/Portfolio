@@ -1,10 +1,10 @@
-.Home{
+main{
     /* height: 37rem; */
-    margin: 2rem auto ;
-    display: flex;
+    margin-bottom: 2rem;
     height: auto;
-    width: 90%;
-    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .homeContent{
     margin-top: 2rem;
@@ -14,20 +14,18 @@
     width: 40%;
     height: 22rem;
 }
-/* .personalInfo{
+.personal-info{
     height: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-} */
-.personalInfo div{
-    margin-top: 1rem;
 }
-.greeting{
+.homeContent h1{
+    text-align: left;
     font-size: 2rem;
     font-weight: 600;
 }
-#nameDiv{
+.homeContent h2{
     font-weight: 600;
     font-size: 2.3rem;
 }
@@ -35,29 +33,29 @@
     font-size: 2.5rem;
     font-weight:700;
 }
-#nickName{
+.homeContent h3{
     font-size: 1.5rem;
     text-align: center;
     font-weight: 600;
 }
-.connect{
+.links{
     margin-top: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 50%;
 }
-.rollingText{
+.autoText{
     font-size: 2rem;
     font-weight: 600;
 }
-.avatar{
+.avatarImage{
     margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.avatar img{
+.avatarImage img{
     height: 30rem;
     object-fit:cover;
 }
@@ -68,8 +66,8 @@
 }
 
 /* For Mobile View Only */
-@media (min-width:250px)and (max-width:768px) {
-    .Home{
+@media (max-width:768px) {
+    main{
         /* margin-top: 5rem; */
         display: flex;
         flex-direction: column-reverse;
@@ -80,26 +78,26 @@
         width: 80%;
         /* background-color: aqua; */
     }
-    .greeting{
+    .homeContent h1{
         font-size: 1.5rem;
     }
-    #nameDiv{
+    .homeContent h2{
         font-size: 2rem;
     }
-    .rollingText{
+    .autoText{
         font-size: 1.5rem;
     }
-    .coverImage{
+    .avatarImage{
         margin-top: 2rem;
     }
-    .coverImage img{
+    .avatarImage img{
         height: 15rem;
         object-fit: cover;
     }
     .connectText{
         margin-top: 1rem;
     }
-    .connect{
+    .links{
         width: 90%;
         margin: 2rem auto;
     }

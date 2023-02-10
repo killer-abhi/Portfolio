@@ -4,6 +4,7 @@
 	/* background-color: aqua; */
 }
 .contactFormCard h1 {
+	text-align: left;
     margin-left: 2rem;
 	font-size: 3rem;
 }

@@ -2,7 +2,7 @@
 	margin: 5rem auto;
 	/* padding: 2rem; */
 	width: 90%;
-	border: 2px solid purple;
+	border: 2px solid;
 	border-radius: 5px;
 	display: flex;
 }
@@ -11,6 +11,7 @@
 	width: 40%;
 }
 .getInTouchCard h1 {
+	text-align: left;
 	font-size: 3rem;
 }
 .getInTouchCard p {
@@ -25,7 +26,6 @@
 .contactIcon {
 	width: 4rem;
 	height: 4rem;
-	background-color: purple;
 	border-radius: 50%;
 	color: aliceblue;
 	display: flex;
@@ -35,7 +35,6 @@
 .contactValue {
 	margin-left: 2rem;
 	font-size: 2rem;
-	color: purple;
 }
 
 @media (max-width: 768px) {

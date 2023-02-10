@@ -235,6 +235,7 @@
 		width: 6.5rem;
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem 0.5rem 1rem;
+		animation: fade 0.5s ease-in forwards;
 		/* margin-left: 1rem; */
 	}
 	.mob-nav a{
@@ -257,4 +258,13 @@
 		border-radius: 0.5rem;
 	}
 	.navs{pointer-events: none;}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

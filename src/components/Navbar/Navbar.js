@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useLocation } from "react-router-dom";
-
-import Zoom from '@mui/material/Zoom';
+import { useLocation } from "react-router-dom";
 
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -14,9 +12,12 @@ import ColorModal from "./ColorModal";
 import Routes from "./Routes";
 
 import PersonalData from "../../Data/PersonalData";
-const Navbar=(props)=>{
+
+const Navbar = () => {
+
     const menuRef = useRef();
     const dispatch = useDispatch();
+
     const nonThemeColor = useSelector(state => state.nonThemeColor);
     const changeColor = (newColor) => {
         console.log(newColor);
@@ -55,12 +56,19 @@ const Navbar=(props)=>{
     function handleDropDown() {
         setIsDropDownVisible((prevState) => !prevState);
     }
+
     const activeNavRoute = useLocation();
+    let hours = new Date().getHours();
+    
     useEffect(() => {
-        if (isDropDownVisible) {
-            menuRef.current.checked = false;
-            handleDropDown();
+        if (hours > 18) {
+            handleModeChange();
         }
+    }, [hours]);
+
+    useEffect(() => {
+        handleDropDown();
+        menuRef.current.checked = false;
     }, [activeNavRoute])
 
     return (
@@ -72,7 +80,7 @@ const Navbar=(props)=>{
                     </div>
                 </div>
                 <div className="navsContainer" style={{ color: nonThemeColor }}>
-                    <Routes/>
+                    <Routes />
                 </div>
                 <div className="selectTheme">
                     <div className="selectMode" onClick={handleModeChange}>
@@ -94,7 +102,7 @@ const Navbar=(props)=>{
                     </label>
                 </div>
             </div>
-            {isDropDownVisible&&<div className="mob-nav" style={{ color: nonThemeColor }}>
+            {isDropDownVisible && <div className="mob-nav" style={{ color: nonThemeColor }}>
                 <Routes />
             </div>}
         </div>

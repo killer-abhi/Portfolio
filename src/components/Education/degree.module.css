@@ -3,42 +3,33 @@
     justify-content: center;
     align-items: center;
 }
-.degree{
+.degreeMain{
     width: 80%;
     margin: 3rem auto;
-    font-family: "Barlow Condensed";
-    /* background-color: aqua; */
 }
-.degree h1{
+.degreeMain h1{
     text-align: center;
     font-size: 3rem;
     font-weight: 800;
 }
-.degree-card{
+.degreeCard{
     margin-top: 1rem;
     display: flex;
     align-items: center;
-    /* height: 20rem; */
 }
 .degreeImage{
     height: 15rem;
     width: 15rem;
     border-radius: 50%;
-    border:5px solid purple;
+    border:5px solid;
 }
 .degreeImage img{
     height: 10rem;
-    width: 10rem;
-    
+    width: 10rem; 
 }
 .degreeWrapper{
-
     margin-left: 2rem;
     width: 75%;
-    /* box-shadow: 2px 2px 5px purple;
-    border-bottom: 1px solid purple;
-    border-left: 1px solid purple;
-    border-right: 1px solid purple; */
 }
 .degreeInfo{
     border-top-left-radius: inherit;
@@ -46,14 +37,15 @@
     padding: 1rem;
     font-weight: 900;
 }
-#college-name{
+.degreeInfo h1{
+    text-align: left;
     font-size: 2.2rem;
 }
-#course{
+.degreeInfo h2{
     font-size: 1.5rem;
     margin-top: 1rem;
 }
-#course-duration{
+.degreeInfo h3{
     float: right;
     font-size: 1.5rem;
 }
@@ -64,17 +56,16 @@
     font-weight: 600;
 }
 ul li{
-    /* list-style-image:url() ; */
     list-style-type: square;
     margin-top: 1rem;
 }
 
 @media (max-width:768px) {
-    .degree{
+    .degreeMain{
         width: 90%;
         margin-top: 5rem;
     }
-    .degree-card{
+    .degreeCard{
         flex-direction: column;
         gap: 2rem;
     }
@@ -86,18 +77,14 @@ ul li{
     .degreeWrapper{
        margin-left: 0rem;
         width: 90%;
-        /* box-shadow: 2px 2px 5px purple;
-        border-bottom: 1px solid purple;
-        border-left: 1px solid purple;
-        border-right: 1px solid purple; */
     }
-    #college-name{
+    .degreeInfo h1{
         font-size: 1.8rem;
     }
-    #course{
+    .degreeInfo h2{
         font-size: 1.4rem;
     }
-    #course-duration{
+    .degreeInfo h3{
         font-size: 1.2rem;
     }
 }
