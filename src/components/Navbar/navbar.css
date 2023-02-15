@@ -252,10 +252,7 @@
 	}
 	.active {
 		width: max-content;
-		border-bottom-left-radius: 0rem;
-		border-bottom-right-radius: 0rem;
 		border-bottom: 4px solid purple;
-		border-radius: 0.5rem;
 	}
 	.navs{pointer-events: none;}
 }

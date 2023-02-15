@@ -12,7 +12,6 @@ function Education(props) {
     const uiColor=useSelector(state=>state.uiColor);
 
     const languagesDone=EducationData.codingStatus;
-    console.log(languagesDone);
     return (
         <Fragment>
             <div className={classes.educationHeader}>

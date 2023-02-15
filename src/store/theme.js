@@ -20,7 +20,7 @@ const themeSlice=createSlice({
         toggleMode(state){
             if(state.mode==='light'){
                 state.mode='dark';
-                state.theme.color='white';
+                state.theme.color='cyan';
                 state.theme.backgroundColor='black';
                 state.nonThemeColor='white';
             }

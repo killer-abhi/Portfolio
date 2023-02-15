@@ -8,7 +8,6 @@ import { useSelector } from "react-redux";
 function Footer(){
     const nonThemeColor=useSelector(state=>state.nonThemeColor);
     let currentYear=new Date().getFullYear();
-    console.log(currentYear);
     return(
         <footer className="centered" style={{color:nonThemeColor}}>
             <CopyrightIcon/>

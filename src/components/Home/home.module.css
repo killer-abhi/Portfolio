@@ -13,6 +13,7 @@ main{
     justify-content: space-between;
     width: 40%;
     height: 22rem;
+    /* animation: renderFromLeft 1s ease forwards; */
 }
 .personal-info{
     height: 10rem;
@@ -54,6 +55,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* animation: renderFromRight 1s ease forwards; */
 }
 .avatarImage img{
     height: 30rem;

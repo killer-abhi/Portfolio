@@ -19,11 +19,13 @@
     height: 25rem;
     width: 25rem;
     object-fit: contain;
+    /* animation: renderFromLeft 1s ease forwards; */
 }
 .contactCard{
     margin-top: 4rem;
     text-align: center;
     width: 40%;
+    /* animation: renderFromRight 1s ease forwards; */
 }
 .contactCard h1{
     font-size: 3rem;
@@ -66,5 +68,26 @@
     .contactCard{
         margin: 0rem auto;
         width: 90%;
+    }
+}
+
+@keyframes renderFromLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes renderFromRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }

@@ -17,10 +17,10 @@ const Navbar = () => {
 
     const menuRef = useRef();
     const dispatch = useDispatch();
-
+    const activeNavRoute = useLocation();
+    
     const nonThemeColor = useSelector(state => state.nonThemeColor);
     const changeColor = (newColor) => {
-        console.log(newColor);
         dispatch(themeActions.changeThemeColor(newColor));
     }
 
@@ -57,14 +57,17 @@ const Navbar = () => {
         setIsDropDownVisible((prevState) => !prevState);
     }
 
-    const activeNavRoute = useLocation();
-    let hours = new Date().getHours();
     
+    let systemTheme='light';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        systemTheme='dark';
+    }
+
     useEffect(() => {
-        if (hours > 18) {
+        if (systemTheme==='dark') {
             handleModeChange();
         }
-    }, [hours]);
+    }, [systemTheme]);
 
     useEffect(() => {
         handleDropDown();

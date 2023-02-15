@@ -16,9 +16,7 @@ function Home(props) {
     function handleTyper() {
         let textItems = autoTypeData;
         var autoTyper = document.getElementById('typer');
-        console.log(autoTyper);
         new Typewriter(autoTyper, {
-
             strings: textItems,
             autoStart: true,
             pauseFor: 1000,
@@ -27,7 +25,7 @@ function Home(props) {
     }
     useEffect(
         handleTyper
-        , []);
+    ,[]);
     return (
         <main>
             <div className={classes.homeContent}>

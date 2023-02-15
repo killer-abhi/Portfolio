@@ -9,6 +9,7 @@
     margin: 3rem auto;
     height: 30rem;
     width: 30rem;
+    /* animation: renderFromLeft 0.5s ease forwards; */
 }
 .eduImg img{
     height: 30rem;
@@ -21,6 +22,7 @@
     gap: 1rem;
     align-items: center;
     /* background-color: aqua; */
+    /* animation: renderFromRight 0.5s ease forwards; */
 }
 .educationCard h1{
     font-size: 5rem;
@@ -115,5 +117,32 @@
     .progressBar progress{
         width: 70%;
         height: 1.5rem;
+    }
+}
+
+@media (max-width:768px) {
+    .app-content{
+        margin-top: 4rem;
+    }
+    
+}
+@keyframes renderFromLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes renderFromRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
