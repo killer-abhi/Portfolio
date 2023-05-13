@@ -33,7 +33,7 @@ const Projects = (props) => {
                 })}
             </div>
             <div className={styles.moreProject}>
-                <a href={`${SocialData.githubLink}?tab=repositories`}>
+                <a target="_blank" rel="noreferrer" href={`${SocialData.githubLink}?tab=repositories`}>
                     <Button className={styles.moreProjectBtn}>More Projects</Button>
                 </a>
             </div>
