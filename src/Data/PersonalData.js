@@ -1,12 +1,10 @@
 const PersonalData = {
-    firstName: "Abhishek",
-    lastName: "Kumar",
-    nickName:"<  killer - abhi >",
-    mobNo:"+91 8299069282",
-    email:"abhi09148299@gmail.com",
-    address:"Farrukhabad , U.P , India",
-    aboutMe:"Hi Everyone, I am Abhishek Kumar from Uttar Pradesh, India.I learned C, C++, Python, JavaScript etc, Worked with libraries & frameworks like ReactJS, NodeJS. Have a keen knowledge of databases like MySQL, MongoDB and Firebase. Apart from Coding I love to play games.",
-    resumeLink:'#'
-}
-export const autoTypeData=['2nd Year IT Grad', 'Developer', 'MERN Stack Developer', 'Open Source Contributor'];
+  firstName: "Zach",
+  lastName: "Gilbert",
+  email: "gilb9711@gmail.com",
+  aboutMe:
+    "Software developer with experience in full-stack web development utilizing the MERN tech stack. I've been coding since; therefore, I have ____ of experience in web development.",
+  resumeLink: "#",
+};
+export const autoTypeData = ["Developer", "MERN Stack Developer"];
 export default PersonalData;

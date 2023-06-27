@@ -1,51 +1,57 @@
 * {
-	top: 0;
-	left: 0;
-	margin: 0;
-	padding: 0;
-	color: inherit;
-	font-family: "Barlow Condensed";
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: "Arial";
 }
+
+html {
+  min-height: 100%;
+}
+
 .App {
-	/* max-width: ; */
-	/* margin:0rem auto; */
-	/* transition:all 0.25s linear 0s; */
+  max-width: 100%;
+
+  margin: 0rem auto;
+  transition: all 0.25s linear 0s;
 }
 .app-content {
-	margin-top: 5rem;
+  margin-top: 5rem;
 }
 @media (max-width: 768px) {
-	.app-content {
-		margin-top: 4rem;
-	}
+  .app-content {
+    margin-top: 4rem;
+  }
 }
 
 .fade-enter {
-	opacity: 0;
-	z-index: 1;
+  opacity: 0;
+  z-index: 1;
 }
 
 .fade-enter.fade-enter-active {
-	opacity: 1;
-	transition: opacity 0.3s ease-in;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
 }
 @keyframes renderFromLeft {
-	0% {
-		opacity: 0;
-		transform: translateX(-100%);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 @keyframes renderFromRight {
-	0% {
-		opacity: 0;
-		transform: translateX(100%);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

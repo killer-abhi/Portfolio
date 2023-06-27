@@ -1,106 +1,105 @@
-main{
-    /* height:100vh; */
-    margin-bottom: 4.5rem;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main {
+  /* height:100vh; */
+  margin-bottom: 4.5rem;
+  min-height: 100%;
+  display: flex;
+  margin-left: 5%;
 }
-.homeContent{
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40%;
-    height: 22rem;
-    /* animation: renderFromLeft 1s ease forwards; */
+.homeContent {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  height: 22rem;
+  /* animation: renderFromLeft 1s ease forwards; */
 }
-.personal-info{
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.personal-info {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-.homeContent h1{
-    text-align: left;
-    font-size: 2rem;
-    font-weight: 600;
+.homeContent h1 {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 600;
 }
-.homeContent h2{
-    font-weight: 600;
-    font-size: 2.3rem;
+.homeContent h2 {
+  font-weight: 600;
+  font-size: 2.3rem;
 }
-#name{
-    font-size: 2.5rem;
-    font-weight:700;
+#name {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
-.homeContent h3{
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: 600;
+.homeContent h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
 }
-.links{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
+.links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
 }
-.autoText{
-    font-size: 2rem;
-    font-weight: 600;
+.autoText {
+  font-size: 2rem;
+  font-weight: 600;
 }
-.avatarImage{
-    margin-top: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* animation: renderFromRight 1s ease forwards; */
+.avatarImage {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* animation: renderFromRight 1s ease forwards; */
 }
-.avatarImage img{
-    height: 30rem;
-    object-fit:cover;
+.avatarImage img {
+  height: 30rem;
+  object-fit: cover;
 }
-.connectText{
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    font-weight: 700;
+.connectText {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 /* For Mobile View Only */
-@media (max-width:768px) {
-    main{
-        /* margin-top: 5rem; */
-        display: flex;
-        flex-direction: column-reverse;
-        height: auto;
-    }
-    .homeContent{
-        margin-top: 2rem;
-        width: 80%;
-        /* background-color: aqua; */
-    }
-    .homeContent h1{
-        font-size: 1.5rem;
-    }
-    .homeContent h2{
-        font-size: 2rem;
-    }
-    .autoText{
-        font-size: 1.5rem;
-    }
-    .avatarImage{
-        margin-top: 2rem;
-    }
-    .avatarImage img{
-        height: 15rem;
-        object-fit: cover;
-    }
-    .connectText{
-        margin-top: 1rem;
-    }
-    .links{
-        width: 90%;
-        margin: 2rem auto;
-    }
+@media (max-width: 768px) {
+  main {
+    /* margin-top: 5rem; */
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .homeContent {
+    margin-top: 2rem;
+    width: 80%;
+    /* background-color: aqua; */
+  }
+  .homeContent h1 {
+    font-size: 1.5rem;
+  }
+  .homeContent h2 {
+    font-size: 2rem;
+  }
+  .autoText {
+    font-size: 1.5rem;
+  }
+  .avatarImage {
+    margin-top: 2rem;
+  }
+  .avatarImage img {
+    height: 15rem;
+    object-fit: cover;
+  }
+  .connectText {
+    margin-top: 1rem;
+  }
+  .links {
+    width: 90%;
+    margin: 2rem auto;
+  }
 }

@@ -1,27 +1,9 @@
 let certificationsList=[
     {
-        title:"Web Development BootCamp",
-        instructor:"Angela Yu",
+        title:"Full-Stack Web Development",
+        instructor:"Gary T Almes",
         link:"#",
-        platform:'udemy'
-    },
-    {
-        title:"React Js",
-        instructor:"Maximilian Schwarzmuller",
-        link:"#",
-        platform:'udemy'
-    },
-    {
-        title:"Flutter Development",
-        instructor:"Maximilian Schwarzmuller",
-        link:"#",
-        platform:'udemy'
-    },
-    {
-        title:"Node Js",
-        instructor:"Maximilian Schwarzmuller",
-        link:"#",
-        platform:'udemy'
+        platform:'University of Minnesota/EdX'
     }
 ];
 
