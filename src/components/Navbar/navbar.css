@@ -43,7 +43,7 @@
   font-size: 1.5rem;
   border-bottom-left-radius: 0rem;
   border-bottom-right-radius: 0rem;
-  border-bottom: 3px solid purple;
+  /* border-bottom: 3px solid purple; */
   border-radius: 0.5rem;
 }
 .navs:hover {
@@ -253,7 +253,7 @@
   }
   .active {
     width: max-content;
-    border-bottom: 4px solid purple;
+    /* border-bottom: 4px solid purple; */
   }
   .navs {
     pointer-events: none;
