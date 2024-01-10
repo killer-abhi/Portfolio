@@ -225,18 +225,21 @@
 	}
 
 	.mob-nav{
-		/* background-color: aqua; */
+		background-color: rgba(0, 0, 0, 0.578);
+		position: fixed;
+		top: 0;
+		right: 10px;
+		left: auto;
 		margin-top: 4rem;
 		height: 16rem;
+		width: max-content;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		font-size: 1.3rem;
-		width: 6.5rem;
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem 0.5rem 1rem;
 		animation: fade 0.5s ease-in forwards;
-		/* margin-left: 1rem; */
 	}
 	.mob-nav a{
 		text-decoration: none;
@@ -249,10 +252,6 @@
 		padding: 0.5rem 1rem 0.5rem 1rem;
 		font-size: 1.3rem;
 		text-align: justify;
-	}
-	.active {
-		width: max-content;
-		border-bottom: 4px solid purple;
 	}
 	.navs{pointer-events: none;}
 }

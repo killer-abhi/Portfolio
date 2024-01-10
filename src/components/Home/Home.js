@@ -27,7 +27,7 @@ function Home(props) {
         handleTyper
     ,[]);
     return (
-        <main>
+        <main id="home">
             <div className={classes.homeContent}>
                 <h1 className={classes.greeting}>
                     Hi There !

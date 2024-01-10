@@ -1,15 +1,11 @@
 const languagesDone = [
     {
-        name: 'C',
+        name: 'C++',
         percentDone: 90
     },
     {
-        name: 'C++',
-        percentDone: 92
-    },
-    {
         name: 'Python',
-        percentDone: 20
+        percentDone: 70
     },
     {
         name: 'React Js',
@@ -19,6 +15,10 @@ const languagesDone = [
         name: 'Node Js',
         percentDone: 70
     },
+    {
+        name: 'Dart',
+        percentDone:40
+    }
 ]
 const EducationData={
     collegeName:"Rajkiya Engineering College, Ambedkar Nagar",
@@ -26,7 +26,7 @@ const EducationData={
     couseStartYear:"2021",
     courseEndYear:"Present",
     details:[
-        'I joined my college in 2021. Cleared First Year with a good academic performance.',
+        'I joined my college in 2021. Cleared First and Second Year with a good academic performance.',
         'I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, COA, AI etc.',
         ' Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.'
     ],

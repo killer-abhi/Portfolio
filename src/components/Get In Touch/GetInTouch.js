@@ -19,7 +19,7 @@ const GetInTouch = (props) => {
     const Icons=[<LocationOnIcon fontSize="large"/>,<SendIcon fontSize="large"/>,<CallIcon fontSize="large"/>];
 
     const contactDetails = data.map((item, index) =>
-        <div className={classes.contactCard} style={{color:uiColor}} key={index}>
+        <div className={classes.contactCard} style={{color:nonThemeColor}} key={index}>
             <div className={classes.contactIcon} style={{backgroundColor:uiColor}}>{Icons[index]}</div>
             <div className={classes.contactValue}>{item}</div>
         </div>

@@ -105,7 +105,7 @@ const Navbar = () => {
                     </label>
                 </div>
             </div>
-            {isDropDownVisible && <div className="mob-nav" style={{ color: nonThemeColor }}>
+            {isDropDownVisible && <div className="mob-nav" style={{ color: 'white' }}>
                 <Routes />
             </div>}
         </div>

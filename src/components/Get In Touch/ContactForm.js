@@ -63,10 +63,11 @@ const ContactForm = (props) => {
             return;
         }
         const message={
-            name:enteredName+enteredLName,
+            time:new Date().toUTCString(),
+            name:enteredName+" "+enteredLName,
             email:enteredEmail,
             phone:enteredPhone,
-            message:enteredMessage
+            message:enteredMessage,
         }
         finishEnteringHandler();
         sendMessageHanlder(message);

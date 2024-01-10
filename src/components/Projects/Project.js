@@ -15,7 +15,7 @@ const Projects = (props) => {
     const uiColor = useSelector(state => state.uiColor);
     let projects = ProjectsData.DUMMY_PROJECTS;
     return (
-        <React.Fragment>
+        <div id="projects">
             <div className={styles.projects}>
                 <section className={styles.projectImg}>
                     <img src={projectCoverImg} alt="" />
@@ -37,7 +37,7 @@ const Projects = (props) => {
                     <Button className={styles.moreProjectBtn}>More Projects</Button>
                 </a>
             </div>
-        </React.Fragment>
+        </div>
     )
 };
 

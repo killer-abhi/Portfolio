@@ -1,6 +1,4 @@
-import { color } from '@mui/system';
 import React from 'react';
-import { useSelector } from 'react-redux';
 import classes from "./button.module.css";
 const Button = (props) => {
   return (

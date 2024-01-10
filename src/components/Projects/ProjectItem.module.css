@@ -6,6 +6,10 @@
     flex-direction: column;
     /* background-color: aqua; */
 }
+.itemHeader{
+    display: flex;
+    justify-content: space-between;
+}
 .projectItem h2{
     font-size: 2rem;
     font-weight: 700;
@@ -23,9 +27,14 @@
 }
 .projectLink{
     margin-top: auto;
-    width: 5rem;
-    display: flex;
+    /* width: 5rem; */
+    display: none;
     justify-content: space-between;
+}
+
+.projectItem:hover .projectLink{
+    display: block;
+    animation: fadeIn 1s ease-in-out normal forwards;
 }
 .projectItem:hover{
     cursor: pointer;
@@ -40,6 +49,14 @@
     }
     100%{
         transform: scale(1.03);
+    }
+}
+@keyframes fadeIn {
+    0%{
+        z-index: 0;
+    }
+    100%{
+        z-index:1;
     }
 }
 @media (max-width:768px) {
@@ -57,5 +74,8 @@
     }
     .controls{
         margin-top: 1rem;
+    }
+    .projectLink{
+        display: block;
     }
 }

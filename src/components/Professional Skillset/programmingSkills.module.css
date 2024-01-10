@@ -15,6 +15,7 @@
     width: 90%;
 }
 .skillItem{
+    position: relative;
     width: 15rem;
     height: 10rem;
     display: flex;
@@ -24,17 +25,22 @@
     border: 3px solid;
     border-radius: 10px;
 }
-.name{
-    display: none;
+.skillName{
+    display:none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    text-align: right;
 }
 .skillItem svg{
-    /* background-color: aquamarine; */
     height: 6rem;
     width: 6rem;
-    /* color: inherit; */
 }
-.skillItem svg:hover{
+.skillItem:hover{
     cursor: pointer;
+}
+.skillItem:hover .skillName{
+    display: block;
 }
 @media (max-width:768px) {
     .skillSetCard{

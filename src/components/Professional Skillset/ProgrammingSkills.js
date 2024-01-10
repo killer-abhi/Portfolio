@@ -1,8 +1,9 @@
 
 import classes from "./programmingSkills.module.css";
-import { CPP, python, mongoDB, fireBase, react, nodeJs, js, redux } from "../asset/svg/svg";
+import { CPP, Python, MongoDB, FireBase, ReactJS, NodeJs, JavaScript, Redux } from "../asset/svg/svg";
 import { useSelector } from "react-redux";
-const skills = [CPP, python, fireBase, react, js, nodeJs, mongoDB, redux];
+const skills = [CPP, Python, FireBase, ReactJS, JavaScript, NodeJs, MongoDB, Redux];
+const skillNames=["C++","Python","Firebase","ReactJs","JavaScript","NodeJs","MongoDB","Redux"];
 const ProgrammingSkills = (props) => {
 
     const uiColor=useSelector(state=>state.uiColor);
@@ -14,8 +15,8 @@ const ProgrammingSkills = (props) => {
             <div className={classes.skillSetCard} style={{ color: nonThemeColor }}>
                 {skills.map((Item, index) =>
                     <div className={classes.skillItem} style={{borderColor:uiColor}} key={index}>
-                        <div className={classes.name}>React</div>
                         <Item />
+                        <span className={classes.skillName}>{skillNames[index]}</span>
                     </div>
                 )}
             </div>
