@@ -15,11 +15,11 @@ const SocialLinks = (props) => {
     const nonThemeColor=useSelector(state=>state.nonThemeColor);
     return (
         <div className={`${classes.socialLinks} ${props.className}`} style={{color:nonThemeColor}}>
-            <a href={SocialData.githubLink} ><GitHubIcon fontSize="large" /></a>
-            <a href={SocialData.linkedInLink}><LinkedInIcon fontSize="large" /></a>
-            <a href={SocialData.twitterLink}><TwitterIcon fontSize="large" /></a>
-            <a href={SocialData.instaLink}><InstagramIcon fontSize="large" /></a>
-            <a href={SocialData.emailLink}><EmailIcon fontSize="large" /></a>
+            <a href={SocialData.githubLink} target="_blank" rel="noreferrer" ><GitHubIcon fontSize="large" /></a>
+            <a href={SocialData.linkedInLink} target="_blank" rel="noreferrer"><LinkedInIcon fontSize="large" /></a>
+            <a href={SocialData.twitterLink} target="_blank" rel="noreferrer"><TwitterIcon fontSize="large" /></a>
+            <a href={SocialData.instaLink} target="_blank" rel="noreferrer"><InstagramIcon fontSize="large" /></a>
+            <a href={SocialData.emailLink} target="_blank" rel="noreferrer"><EmailIcon fontSize="large" /></a>
         </div>
     )
 };

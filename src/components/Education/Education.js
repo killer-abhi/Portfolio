@@ -14,7 +14,7 @@ function Education(props) {
     const languagesDone=EducationData.codingStatus;
     return (
         <Fragment>
-            <div className={classes.educationHeader}>
+            <div className={classes.educationHeader} id="education">
                 <div className={classes.eduImg}>
                     <img src={EducationImg} alt="" srcset="" />
                 </div>
@@ -27,7 +27,7 @@ function Education(props) {
                                 <div key={index} className={classes.progressBar}>
                                     <label htmlFor={item.name}>{item.name}</label>
                                     <progress id={item.name} value={item.percentDone} max="100"></progress>
-                                    <h5>{item.percentDone}%</h5>
+                                    {/* <h5>{item.percentDone}%</h5> */}
                                 </div>
                             )
                         }

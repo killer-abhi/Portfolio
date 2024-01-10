@@ -26,7 +26,7 @@ const CreateCertificate = (props) => {
         <div className={classes.certificate} style={{borderColor:uiColor}}>
             <div className={classes.Overlay}>
                 <div className={classes.overlayLink}>
-                    <a href={props.item.link} id='overlay-text'>
+                    <a href={props.item.link} id='overlay-text' target="_blank noreferrer">
                         <Button> View Certificate</Button>
                     </a>
                 </div>
@@ -36,8 +36,8 @@ const CreateCertificate = (props) => {
                     {certImage}
                 </div>
                 <div className={classes.certInfo}>
-                    <h1 style={{color:uiColor}}>{props.item.title}</h1>
-                    <h2>{props.item.instructor}</h2>
+                    <h1 style={{color:nonThemeColor}}>{props.item.title}</h1>
+                    <h2 style={{color:uiColor}}>{props.item.instructor}</h2>
                 </div>
             </div>
         </div>

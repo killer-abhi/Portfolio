@@ -6,6 +6,9 @@
 	color: inherit;
 	font-family: "Barlow Condensed";
 }
+html{
+	scroll-behavior: smooth;
+}
 .App {
 	/* max-width: ; */
 	/* margin:0rem auto; */
