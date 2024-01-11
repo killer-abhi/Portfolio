@@ -53,6 +53,7 @@
 @media (max-width:768px) {
     .contactMe{
         flex-direction: column;
+        padding-top: 2rem;
     }
     .avatar{
         display: flex;

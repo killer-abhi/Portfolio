@@ -17,16 +17,16 @@ function Routes(props) {
             href - to 
             # - / */}
         
-            <a href="#home">
+            <a href="#home" onClick={props.onClick}>
                 <div className="navs active" onClick={()=>toggleActive(0)}>Home</div>
             </a>
-            <a href="#education">
+            <a href="#education" onClick={props.onClick}>
                 <div className="navs" onClick={()=>toggleActive(1)}>Education</div>
             </a>
-            <a href="#projects">
+            <a href="#projects" onClick={props.onClick}>
                 <div className="navs" onClick={()=>toggleActive(2)}>Projects</div>
             </a>
-            <a href="#getInTouch">
+            <a href="#getInTouch" onClick={props.onClick}>
                 <div className="navs" onClick={()=>toggleActive(3)}>Get In Touch</div>
             </a>
             

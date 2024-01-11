@@ -7,6 +7,8 @@ import Button from "../UI/Button";
 import GetInTouch from '../Get In Touch/GetInTouch';
 import { useSelector } from 'react-redux';
 
+import ImageUrl from "../../Data/dp.jpeg";
+
 const AboutMe = () => {
 
     const uiColor=useSelector(state=>state.uiColor);
@@ -14,7 +16,7 @@ const AboutMe = () => {
         <Fragment>
             <div className={classes.contactMe} id='getInTouch'>
                 <div className={classes.avatar}>
-                    <img src={PersonalData.imageUrl} alt="Loading ..." style={{borderColor:uiColor}} />
+                    <img src={ImageUrl} alt="Loading ..." style={{borderColor:uiColor}} />
                 </div>
                 <div className={classes.contactCard}>
                     <h1 style={{color:uiColor}}>About Me</h1>

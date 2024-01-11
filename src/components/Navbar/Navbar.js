@@ -54,9 +54,14 @@ const Navbar = () => {
         setColorModalShown(prev => !prev);
     }
     function handleDropDown() {
-        setIsDropDownVisible((prevState) => !prevState);
+        setIsDropDownVisible((prevValue)=>{
+            return !prevValue;
+        });
     }
-
+    function handleNavigate(){
+        handleDropDown();
+            menuRef.current.checked = false;
+    }
     
     let systemTheme='light';
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -69,10 +74,10 @@ const Navbar = () => {
         }
     }, [systemTheme]);
 
-    useEffect(() => {
-        handleDropDown();
-        menuRef.current.checked = false;
-    }, [activeNavRoute])
+    // useEffect(() => {
+    //     handleDropDown();
+    //     menuRef.current.checked = false;
+    // }, [activeNavRoute])
 
     return (
         <div className="main">
@@ -97,7 +102,7 @@ const Navbar = () => {
                         }
                     </div>
 
-                    <input type="checkbox" onClick={handleDropDown} ref={menuRef} id="burger-toggle" />
+                    <input type="checkbox" onClick={()=>handleDropDown()} ref={menuRef} id="burger-toggle" />
                     <label htmlFor="burger-toggle" className="burger-menu">
                         <div className="line"></div>
                         <div className="line"></div>
@@ -106,7 +111,7 @@ const Navbar = () => {
                 </div>
             </div>
             {isDropDownVisible && <div className="mob-nav" style={{ color: 'white' }}>
-                <Routes />
+                <Routes onClick={handleNavigate} />
             </div>}
         </div>
     )
