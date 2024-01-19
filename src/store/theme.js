@@ -4,7 +4,7 @@ const initialThemeState={
     mode:'light',
     uiColor:'purple',
     theme:{
-        color:'black',
+        color:'rgb(0, 31, 63)',
         backgroundColor:"rgb(237, 249, 254)",
     },
     nonThemeColor:'black'
@@ -21,7 +21,7 @@ const themeSlice=createSlice({
             if(state.mode==='light'){
                 state.mode='dark';
                 state.theme.color='cyan';
-                state.theme.backgroundColor='black';
+                state.theme.backgroundColor='rgb(0, 31, 63)';
                 state.nonThemeColor='white';
             }
             else{
