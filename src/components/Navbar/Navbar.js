@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
 
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -17,7 +16,6 @@ const Navbar = () => {
 
     const menuRef = useRef();
     const dispatch = useDispatch();
-    const activeNavRoute = useLocation();
     
     const nonThemeColor = useSelector(state => state.nonThemeColor);
     const changeColor = (newColor) => {
@@ -25,6 +23,15 @@ const Navbar = () => {
     }
 
     const mode = useSelector(state => state.mode);
+    useEffect(()=>{
+        if(mode==="dark"){
+            const lightModeBtn = document.getElementById("lightModeBtn")
+            const darkModeBtn = document.getElementById("darkModeBtn")
+            lightModeBtn.style.display = "none";
+            darkModeBtn.style.display = "block";
+            darkModeBtn.style.color = "black";
+        }
+    },[mode])
     const bgColor = useSelector(state => state.theme.backgroundColor);
     const activeColor = useSelector(state => state.theme.color);
 
@@ -41,13 +48,14 @@ const Navbar = () => {
             lightModeBtn.style.display = "none";
             darkModeBtn.style.display = "block";
             darkModeBtn.style.color = "black";
+            dispatch(themeActions.setMode("dark"));
         }
         else {
             lightModeBtn.style.display = "block";
             darkModeBtn.style.display = "none";
             lightModeBtn.style.color = "white";
+            dispatch(themeActions.setMode("light"));
         }
-        dispatch(themeActions.toggleMode());
     }
 
     function handleColorSelector() {
@@ -62,22 +70,7 @@ const Navbar = () => {
         handleDropDown();
             menuRef.current.checked = false;
     }
-    
-    let systemTheme='light';
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        systemTheme='dark';
-    }
 
-    useEffect(() => {
-        if (systemTheme==='dark') {
-            handleModeChange();
-        }
-    }, [systemTheme]);
-
-    // useEffect(() => {
-    //     handleDropDown();
-    //     menuRef.current.checked = false;
-    // }, [activeNavRoute])
 
     return (
         <div className="main">

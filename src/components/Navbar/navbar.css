@@ -59,7 +59,7 @@
 	margin-right: 2rem;
 	display: flex;
 	align-items: center;
-	width: 10rem;
+	width: 5rem;
 	justify-content: space-around;
 }
 .colorSelector {
@@ -76,7 +76,7 @@
 	width: 5rem;
 	height: 2rem;
 	border-radius: 1rem;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: space-evenly;
 }
@@ -114,6 +114,7 @@
 		display: none;
 	}
 	.selectTheme {
+		width: 10rem;
 		margin-left: auto;
 		margin-right: 1rem;
 		/* background-color: aqua; */
@@ -124,6 +125,7 @@
 		width: 1.5rem;
 	}
 	.selectMode {
+		display: flex;
 		width: 4rem;
 		height: 1.8rem;
 	}

@@ -17,8 +17,9 @@ const themeSlice=createSlice({
         changeThemeColor(state,action){
             state.theme.color=action.payload;
         },
-        toggleMode(state){
-            if(state.mode==='light'){
+        setMode(state,action){
+            console.log(action.payload);
+            if(action.payload==='dark'){
                 state.mode='dark';
                 state.theme.color='cyan';
                 state.theme.backgroundColor='rgb(0, 31, 63)';

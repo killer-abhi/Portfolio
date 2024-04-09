@@ -1,0 +1,54 @@
+.theme {
+	position: fixed;
+	top: auto;
+	left: auto;
+	bottom: 20px;
+	right: 50px;
+}
+
+.modeBtn button {
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #6a0dad;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	height: 2.5rem;
+	width: 4rem;
+}
+.modeBtn button:hover {
+	cursor: pointer;
+}
+.theme .dropdown {
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	color: white;
+	background-color: #9c8ea9;
+	border-radius: 5px;
+	margin-bottom: 0.5rem;
+}
+.theme .dropdown li {
+	font-size: 20px;
+	width: 8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 5px;
+	height: 2rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.theme .dropdown li:hover{
+	cursor: pointer;
+	background-color: #7d7288;
+}
+.activeMode{
+	background-color: #0d6efd;
+}
+@media (max-width: 768px) {
+	.theme{
+		display: none;
+	}
+}

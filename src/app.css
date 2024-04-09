@@ -6,13 +6,12 @@
 	color: inherit;
 	font-family: "Barlow Condensed";
 }
-html{
+html {
 	scroll-behavior: smooth;
 }
 .App {
-	/* max-width: ; */
-	/* margin:0rem auto; */
-	/* transition:all 0.25s linear 0s; */
+	width: 100%;
+	position: relative;
 }
 .app-content {
 	margin-top: 5rem;

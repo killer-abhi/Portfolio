@@ -7,15 +7,18 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Education from './components/Education/Education';
-import Certifications from "./components/Certifications/Certifications";
+// import Certifications from "./components/Certifications/Certifications";
 import Projects from "./components/Projects/Project";
 import AboutMe from "./components/About Me/AboutMe";
 import { useSelector } from "react-redux";
+import Mode from './theme/mode';
+
 
 const App = () => {
 
     // const location = useLocation();
     const theme = useSelector(state => state.theme);
+    
     return (
         <div className="App" style={theme}>
             <Navbar />
@@ -24,6 +27,7 @@ const App = () => {
             <Projects />
             <AboutMe />
             <Footer />
+            <Mode/>
         </div>
         /* To use browser-router comment upper section and uncomment app-content section and its imports     */
         /* <div className="app-content">
