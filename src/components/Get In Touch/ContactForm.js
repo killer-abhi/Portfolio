@@ -74,9 +74,13 @@ const ContactForm = (props) => {
     }
     
     const sendMessageHanlder=async(message)=>{
+        console.log(message);
         setBtnText((prevValue)=>'Sending ...');
-        await fetch('https://react-redux-47ef8-default-rtdb.firebaseio.com/portfolio-messages.json',{
+        await fetch('https://talenthub-xssk.onrender.com/portfolio/add',{
             method:'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
             body:JSON.stringify(message)
         });
         setIsSent(true);
