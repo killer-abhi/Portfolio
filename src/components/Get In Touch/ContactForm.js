@@ -76,6 +76,8 @@ const ContactForm = (props) => {
     const sendMessageHanlder=async(message)=>{
         console.log(message);
         setBtnText((prevValue)=>'Sending ...');
+        setIsSent(true);
+        setBtnText((prevValue) => 'Message Sent');
         await fetch('https://talenthub-xssk.onrender.com/portfolio/add',{
             method:'POST',
             headers: {
@@ -83,8 +85,6 @@ const ContactForm = (props) => {
             },
             body:JSON.stringify(message)
         });
-        setIsSent(true);
-        setBtnText((prevValue) => 'Message Sent');
     }
 
     const finishEnteringHandler=()=>{
